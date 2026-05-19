@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMAAD Financial Group — Projets & Impact</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      background: var(--navy);
+      padding: 80px 60px;
+      position: relative;
+      overflow: hidden;
+      min-height: 240px;
+      display: flex;
+      align-items: center;
+    }
+
+    .page-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1400&q=60') center/cover no-repeat;
+      opacity: 0.18;
+    }
+
+    .page-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .page-hero p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--gold);
+      padding: 28px 60px;
+      display: flex;
+      gap: 0;
+      align-items: center;
+    }
+
+    .stat-item {
+      flex: 1;
+      padding: 0 20px;
+      border-right: 1px solid rgba(13,27,42,0.2);
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-item .stat-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .stat-item .stat-label {
+      font-size: 12px;
+      color: var(--navy);
+      opacity: 0.75;
+      margin-top: 5px;
+    }
+
+    /* FILTERS */
+    .filters-bar {
+      background: var(--white);
+      padding: 20px 60px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-right: 8px;
+    }
+
+    .filter-btn {
+      padding: 7px 18px;
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.2s;
+      border-radius: 0;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+
+    /* PROJECTS GRID */
+    .section-projets-grid {
+      padding: 60px 60px 80px;
+      background: var(--white);
+    }
+
+    .projects-header {
+      margin-bottom: 40px;
+    }
+
+    .projects-header h2 {
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    /* Overrides for bigger grid */
+    .card-project-img { height: 200px; }
+  </style>
+</head>
+<body>
+  <div id="navbar-mount"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="section-label light">Réalisations</div>
+      <h1>Projets & Impact</h1>
+      <p>Des résultats mesurables dans des secteurs critiques — un portefeuille de transactions qui traduit notre engagement pour le développement durable de l'Afrique.</p>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-value">+1.000.000.000 €</div>
+      <div class="stat-label">Mobilisé depuis 2020</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">+3</div>
+      <div class="stat-label">Projets PPP structurés</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">15+</div>
+      <div class="stat-label">Pays couverts</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">6</div>
+      <div class="stat-label">Bureaux internationaux</div>
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filters-bar">
+    <span class="filter-label">Filtrer par :</span>
+    <button class="filter-btn active" onclick="filterProjects('tous', this)">Tous</button>
+    <button class="filter-btn" onclick="filterProjects('souverain', this)">Financement Souverain</button>
+    <button class="filter-btn" onclick="filterProjects('ppp', this)">PPP</button>
+    <button class="filter-btn" onclick="filterProjects('corporate', this)">Corporate</button>
+    <button class="filter-btn" onclick="filterProjects('energie', this)">Énergie</button>
+    <button class="filter-btn" onclick="filterProjects('infra', this)">Eaux & Infrastructures</button>
+  </div>
+
+  <!-- PROJECTS GRID -->
+  <section class="section-projets-grid">
+    <div class="projects-header">
+      <div class="section-label">Réalisations</div>
+      <h2>Projets & Impact</h2>
+    </div>
+
+    <div class="grid-3" id="projects-grid">
+
+      <!-- Row 1 -->
+      <div class="card-project" data-cat="infra">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80" alt="Infrastructure routière">
+          <div class="card-project-badge">
+            <div class="badge-country">🇨🇮 Côte d'Ivoire</div>
+            <div class="badge-status badge-closed">Closé 2023</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Infrastructure Routière</div>
+          <div class="amount">150 M€</div>
+          <p>Structuration et closing du financement de l'axe routier stratégique reliant les villes d'Abidjan et de San Pédro.</p>
+        </div>
+      </div>
+
+      <div class="card-project" data-cat="corporate">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Immobilier Guinée">
+          <div class="card-project-badge">
+            <div class="badge-country">🇬🇳 Guinée</div>
+            <div class="badge-status badge-closed">Closé 2024</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Immobilier</div>
+          <div class="amount">10 M$</div>
+          <p>Structuration et closing du financement pour l'acquisition du siège social d'un grand groupe privé guinéen.</p>
+        </div>
+      </div>
+
+      <div class="card-project" data-cat="corporate">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Logistique Guinée">
+          <div class="card-project-badge">
+            <div class="badge-country">🇬🇳 Guinée</div>
+            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T2 2026</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Logistique</div>
+          <div class="amount">5 M$</div>
+          <p>Projet d'acquisition de camions de transport de minerais.</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="card-project" data-cat="ppp">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" alt="Santé Djibouti">
+          <div class="card-project-badge">
+            <div class="badge-country">🇩🇯 Djibouti</div>
+            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T3 2025</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Santé</div>
+          <div class="amount">25 M$</div>
+          <p>Construction de l'Hôpital Régional de Référence de Djibouti.</p>
+        </div>
+      </div>
+
+      <div class="card-project" data-cat="ppp">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80" alt="Santé Bénin">
+          <div class="card-project-badge">
+            <div class="badge-country">🇧🇯 Bénin</div>
+            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T3 2026</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Santé</div>
+          <div class="amount">24 M€</div>
+          <p>Projet de construction d'une unité de vaccins vétérinaires.</p>
+        </div>
+      </div>
+
+      <div class="card-project" data-cat="corporate">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Immobilier Guinée">
+          <div class="card-project-badge">
+            <div class="badge-country">🇬🇳 Guinée</div>
+            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T3 2026</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Immobilier</div>
+          <div class="amount">15 M$</div>
+          <p>Projet de construction de logements pour la Diaspora.</p>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="card-project" data-cat="corporate">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Immobilier Sénégal">
+          <div class="card-project-badge">
+            <div class="badge-country">🇸🇳 Sénégal</div>
+            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T3 2026</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Immobilier</div>
+          <div class="amount">25 M€</div>
+          <p>Construction d'une cité de logements économiques et de standing.</p>
+        </div>
+      </div>
+
+      <div class="card-project" data-cat="souverain">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&q=80" alt="Agriculture Sénégal">
+          <div class="card-project-badge">
+            <div class="badge-country">🇸🇳 Sénégal</div>
+            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T3 2026</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Agriculture</div>
+          <div class="amount">17 M€</div>
+          <p>Construction de silos à grains.</p>
+        </div>
+      </div>
+
+      <div class="card-project" data-cat="corporate">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="Immobilier Cameroun">
+          <div class="card-project-badge">
+            <div class="badge-country">🇨🇲 Cameroun</div>
+            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T3 2026</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Immobilier</div>
+          <div class="amount">20 M€</div>
+          <p>Construction de logements.</p>
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="card-project" data-cat="infra">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80" alt="Hydraulique CIV">
+          <div class="card-project-badge">
+            <div class="badge-country">🇨🇮 Côte d'Ivoire</div>
+            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T4 2026</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Hydraulique</div>
+          <div class="amount">278 M€</div>
+          <p>Projet d'adduction en eau potable d'Abidjan Sud.</p>
+        </div>
+      </div>
+
+      <div class="card-project" data-cat="corporate">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&q=80" alt="Industrie Bénin">
+          <div class="card-project-badge">
+            <div class="badge-country">🇧🇯 Bénin</div>
+            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T4 2026</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Industrie</div>
+          <div class="amount">137 M€</div>
+          <p>Projet de construction d'une unité de production de câbles électriques.</p>
+        </div>
+      </div>
+
+      <div class="card-project" data-cat="corporate">
+        <div class="card-project-img">
+          <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt="Mines Rwanda">
+          <div class="card-project-badge">
+            <div class="badge-country">🇷🇼 Rwanda</div>
+            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T4 2026</div>
+          </div>
+        </div>
+        <div class="card-project-body">
+          <div class="sector">Mines</div>
+          <div class="amount">10 M$</div>
+          <p>Projet d'acquisition de matériel d'exploitation d'une mine de 3Ts.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+
+  <script src="components.js"></script>
+  <script>
+    document.getElementById('navbar-mount').innerHTML = IMAAD_NAV('projets');
+    document.getElementById('footer-mount').innerHTML = IMAAD_FOOTER();
+
+    function filterProjects(cat, btn) {
+      // update buttons
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('#projects-grid .card-project');
+      cards.forEach(card => {
+        if (cat === 'tous' || card.dataset.cat === cat) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
