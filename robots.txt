@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jhouedanou.github.io/imaad/sitemap.xml
