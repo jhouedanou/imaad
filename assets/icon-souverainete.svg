@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="46" viewBox="0 0 43 46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #182a46;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-7 {
+        clip-path: url(#clip-path-3);
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-9 {
+        clip-path: url(#clip-path-4);
+      }
+
+      .cls-10 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-11 {
+        clip-path: url(#clip-path-5);
+      }
+
+      .cls-12 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-13 {
+        clip-path: url(#clip-path-6);
+      }
+
+      .cls-14 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-15 {
+        fill: url(#linear-gradient-7);
+      }
+
+      .cls-16 {
+        fill: url(#linear-gradient-8);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="Tracé_1" data-name="Tracé 1" class="cls-1" d="M7.71,12.063a1.518,1.518,0,0,1,1.1,1.3V31.317h.535V13.36a1.973,1.973,0,0,0-1.427-1.727Z" transform="translate(-7.71 -11.633)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.351" y1="17.75" x2="0.365" y2="17.75" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#87713c"/>
+      <stop offset="0.066" stop-color="#937c42"/>
+      <stop offset="0.186" stop-color="#b49c54"/>
+      <stop offset="0.327" stop-color="#e3c96e"/>
+      <stop offset="0.344" stop-color="#dbc16a"/>
+      <stop offset="0.462" stop-color="#ac8e50"/>
+      <stop offset="0.519" stop-color="#9a7b47"/>
+      <stop offset="0.577" stop-color="#ab8d50"/>
+      <stop offset="0.694" stop-color="#d9bb67"/>
+      <stop offset="0.719" stop-color="#e4c76d"/>
+      <stop offset="0.77" stop-color="#d4b765"/>
+      <stop offset="0.922" stop-color="#aa8b4f"/>
+      <stop offset="1" stop-color="#9a7b47"/>
+    </linearGradient>
+    <clipPath id="clip-path-2">
+      <path id="Tracé_2" data-name="Tracé 2" class="cls-1" d="M13.288,12.063a1.517,1.517,0,0,1,1.095,1.3V31.317h.536V13.36a1.975,1.975,0,0,0-1.427-1.727Z" transform="translate(-13.288 -11.633)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-2" x1="0.274" y1="17.748" x2="0.288" y2="17.748" xlink:href="#linear-gradient"/>
+    <clipPath id="clip-path-3">
+      <path id="Tracé_3" data-name="Tracé 3" class="cls-1" d="M28.453,13.365V31.317h.536V13.369a1.525,1.525,0,0,1,1.095-1.306l-.2-.43a1.975,1.975,0,0,0-1.426,1.732" transform="translate(-28.453 -11.633)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-3" x1="0.063" y1="17.75" x2="0.077" y2="17.75" xlink:href="#linear-gradient"/>
+    <clipPath id="clip-path-4">
+      <path id="Tracé_4" data-name="Tracé 4" class="cls-1" d="M22.874,13.365V31.317h.536V13.369A1.526,1.526,0,0,1,24.5,12.063l-.2-.43a1.975,1.975,0,0,0-1.427,1.732" transform="translate(-22.874 -11.633)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-4" x1="0.141" y1="17.75" x2="0.155" y2="17.75" xlink:href="#linear-gradient"/>
+    <clipPath id="clip-path-5">
+      <rect id="Rectangle_19" data-name="Rectangle 19" class="cls-1" width="9.998" height="0.465"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-5" x1="-0.077" y1="87.274" x2="-0.05" y2="87.274" xlink:href="#linear-gradient"/>
+    <clipPath id="clip-path-6">
+      <rect id="Rectangle_21" data-name="Rectangle 21" class="cls-1" width="11.547" height="0.581"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-6" x1="0" y1="72.709" x2="0.024" y2="72.709" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-7" x1="-0.077" y1="39.185" x2="-0.05" y2="39.185" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-8" x1="0" y1="28.647" x2="0.024" y2="28.647" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Groupe_228" data-name="Groupe 228" transform="translate(-295 -1089.019)">
+    <rect id="Rectangle_10" data-name="Rectangle 10" class="cls-2" width="43" height="46" rx="9" transform="translate(295 1089.019)"/>
+    <g id="Groupe_226" data-name="Groupe 226" transform="translate(-570 1)">
+      <g id="Groupe_97" data-name="Groupe 97" transform="translate(880.737 1098.389)">
+        <g id="Groupe_3" data-name="Groupe 3" transform="translate(2.11 3.184)">
+          <g id="Groupe_2" data-name="Groupe 2" class="cls-3">
+            <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-4" width="19.689" height="1.694" transform="translate(-0.063 19.683) rotate(-89.816)"/>
+          </g>
+        </g>
+        <g id="Groupe_5" data-name="Groupe 5" transform="translate(3.637 3.184)">
+          <g id="Groupe_4" data-name="Groupe 4" class="cls-5">
+            <rect id="Rectangle_15" data-name="Rectangle 15" class="cls-6" width="19.689" height="1.694" transform="translate(-0.063 19.683) rotate(-89.816)"/>
+          </g>
+        </g>
+        <g id="Groupe_7" data-name="Groupe 7" transform="translate(7.787 3.184)">
+          <g id="Groupe_6" data-name="Groupe 6" class="cls-7">
+            <rect id="Rectangle_16" data-name="Rectangle 16" class="cls-8" width="19.689" height="1.694" transform="translate(-0.063 19.683) rotate(-89.816)"/>
+          </g>
+        </g>
+        <g id="Groupe_9" data-name="Groupe 9" transform="translate(6.26 3.184)">
+          <g id="Groupe_8" data-name="Groupe 8" class="cls-9">
+            <rect id="Rectangle_17" data-name="Rectangle 17" class="cls-10" width="19.689" height="1.694" transform="translate(-0.063 19.683) rotate(-89.816)"/>
+          </g>
+        </g>
+        <g id="Groupe_11" data-name="Groupe 11" transform="translate(0.774 1.689)">
+          <g id="Groupe_10" data-name="Groupe 10" class="cls-11">
+            <rect id="Rectangle_18" data-name="Rectangle 18" class="cls-12" width="9.998" height="0.465" transform="translate(0 0)"/>
+          </g>
+        </g>
+        <g id="Groupe_13" data-name="Groupe 13" transform="translate(0 0)">
+          <g id="Groupe_12" data-name="Groupe 12" class="cls-13">
+            <rect id="Rectangle_20" data-name="Rectangle 20" class="cls-14" width="11.547" height="0.581"/>
+          </g>
+        </g>
+        <g id="Groupe_15" data-name="Groupe 15" transform="translate(0.774 24.036)">
+          <g id="Groupe_14" data-name="Groupe 14" class="cls-11">
+            <rect id="Rectangle_22" data-name="Rectangle 22" class="cls-15" width="9.998" height="0.465" transform="translate(0 0)"/>
+          </g>
+        </g>
+        <g id="Groupe_17" data-name="Groupe 17" transform="translate(0 25.609)">
+          <g id="Groupe_16" data-name="Groupe 16" class="cls-13">
+            <rect id="Rectangle_24" data-name="Rectangle 24" class="cls-16" width="11.547" height="0.581"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

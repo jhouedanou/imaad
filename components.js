@@ -3,27 +3,7 @@
 const IMAAD_NAV = (activePage) => `
 <nav class="navbar">
   <a href="index.html" class="navbar-logo">
-    <svg class="imaad-logo-svg" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="56" height="56" fill="none"/>
-      <!-- Colonnes gauches -->
-      <rect x="8" y="14" width="5" height="28" fill="#b8962e"/>
-      <rect x="16" y="18" width="4" height="24" fill="#b8962e" opacity="0.7"/>
-      <!-- Colonnes droites -->
-      <rect x="36" y="18" width="4" height="24" fill="#b8962e" opacity="0.7"/>
-      <rect x="43" y="14" width="5" height="28" fill="#b8962e"/>
-      <!-- Chapiteaux -->
-      <rect x="6" y="10" width="9" height="4" fill="#b8962e"/>
-      <rect x="41" y="10" width="9" height="4" fill="#b8962e"/>
-      <!-- Bases -->
-      <rect x="6" y="42" width="9" height="3" fill="#b8962e"/>
-      <rect x="41" y="42" width="9" height="3" fill="#b8962e"/>
-      <!-- Oiseau stylisé -->
-      <path d="M24 20 Q28 14 32 20 Q28 18 24 20Z" fill="#b8962e" opacity="0.8"/>
-    </svg>
-    <div class="logo-text">
-      <span>IMAAD</span>
-      <span>FINANCIAL GROUP</span>
-    </div>
+    <img class="imaad-logo-svg" src="assets/logo-imaad.svg" alt="IMAAD Financial Group">
   </a>
   <nav class="navbar-nav">
     <a href="index.html" class="${activePage === 'apropos' ? 'active' : ''}">À propos</a>

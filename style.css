@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 :root {
-  --navy: #0d1b2a;
-  --navy-mid: #162333;
-  --gold: #b8962e;
-  --gold-light: #c9a84c;
-  --gold-btn: #b8962e;
-  --cream: #f5f3ef;
+  --navy: #0e1b2e;
+  --navy-mid: #111f38;
+  --navy-grad: #374862;
+  --gold: #c1a258;
+  --gold-light: #dedfab;
+  --gold-btn: #c1a258;
+  --cream: #f8f6f2;
   --white: #ffffff;
-  --text-dark: #0d1b2a;
-  --text-muted: #6b7280;
-  --text-light: #9ca3af;
-  --border: #e5e7eb;
+  --text-dark: #0e1b2e;
+  --text-muted: #707070;
+  --text-light: #818181;
+  --border: #d3d3d3;
   --card-bg: #ffffff;
   --font: 'Open Sans', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,6 +46,7 @@ ul { list-style: none; }
   position: sticky;
   top: 0;
   z-index: 100;
+  font-family: var(--font-heading);
 }
 
 .navbar-logo {
@@ -84,11 +87,10 @@ ul { list-style: none; }
 }
 
 .navbar-nav a {
-  color: rgba(255,255,255,0.85);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
   transition: color 0.2s;
 }
 
@@ -99,18 +101,19 @@ ul { list-style: none; }
 
 .btn-contact-nav {
   background: var(--gold);
-  color: var(--white) !important;
+  color: var(--navy) !important;
   padding: 10px 24px;
   font-size: 12px !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   letter-spacing: 1px !important;
   text-transform: uppercase !important;
+  border-radius: 5px;
   transition: background 0.2s !important;
 }
 
 .btn-contact-nav:hover {
-  background: var(--gold-light) !important;
-  color: var(--white) !important;
+  background: #a88940 !important;
+  color: var(--navy) !important;
 }
 
 /* SVG LOGO */
@@ -423,6 +426,31 @@ footer {
   line-height: 1.5;
 }
 
+/* ─── HERO STATS ROW ─── */
+.hero-stats-row {
+  display: flex;
+  gap: 48px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.hero-stat-value {
+  font-size: 23px;
+  font-weight: 900;
+  color: var(--gold);
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  margin-top: 4px;
+  font-family: var(--font-heading);
+}
+
 /* ─── STATS BAR ─── */
 .stats-bar {
   background: var(--gold);
@@ -447,7 +475,7 @@ footer {
 
 /* ─── HERO ─── */
 .hero {
-  background: var(--navy);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-grad) 100%);
   padding: 80px 60px 60px;
   position: relative;
   overflow: hidden;
@@ -459,7 +487,7 @@ footer {
   top: 0; right: 0;
   width: 600px;
   height: 100%;
-  background: linear-gradient(135deg, transparent 40%, rgba(184,150,46,0.06) 100%);
+  background: linear-gradient(135deg, transparent 40%, rgba(193,162,88,0.06) 100%);
   pointer-events: none;
 }
 
@@ -629,7 +657,7 @@ select.form-control { appearance: none; cursor: pointer; }
 .text-center { text-align: center; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   line-height: 1.2;
 }
 
@@ -653,41 +681,58 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ─── DOMAIN CARDS ─── */
 .domain-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 32px 28px;
+  background: transparent;
+  border: 1px solid rgba(112,112,112,0.7);
+  border-radius: 10px;
+  padding: 28px 22px;
   transition: border-color 0.2s;
+  min-height: 358px;
+  display: flex;
+  flex-direction: column;
 }
 
-.domain-card:hover { border-color: var(--gold); }
+.domain-card--active,
+.domain-card:hover {
+  border-color: var(--gold);
+}
 
 .domain-num {
-  font-size: 40px;
-  font-weight: 800;
+  font-size: 46px;
+  font-weight: 400;
   color: var(--gold);
-  opacity: 0.6;
-  margin-bottom: 8px;
   line-height: 1;
+  margin-bottom: 18px;
+  font-family: var(--font);
+  letter-spacing: -0.46px;
 }
 
 .domain-card h3 {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   color: var(--white);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  font-family: var(--font);
+  letter-spacing: -0.18px;
+}
+
+.domain-card ul {
+  margin-top: 8px;
 }
 
 .domain-card ul li {
-  font-size: 13px;
-  color: rgba(255,255,255,0.6);
-  padding: 5px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  padding-left: 14px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+  padding: 6px 0;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
   position: relative;
+  padding-left: 14px;
 }
 
 .domain-card ul li::before {
-  content: '›';
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--gold);
@@ -723,6 +768,63 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+/* ─── UTILITY CLASSES ─── */
+.btn-full {
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 14px;
+}
+
+.btn-submit {
+  font-size: 13px;
+  margin-top: 0;
+}
+
+.btn-voir-tous {
+  margin-top: 20px;
+}
+
+.stat-row-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-family: var(--font-heading);
+}
+
+.stat-row-text {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+}
+
+.domains-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.file-upload-text {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ─── SECTION VALEURS background fix ─── */
+.section-valeurs {
+  background: var(--cream) !important;
+}
+
+/* ─── SECTION TEAM background fix ─── */
+.section-team-preview {
+  background: var(--cream) !important;
+}
+
+/* ─── TICKER text fix ─── */
+.ticker-track span {
+  color: #f4f4f4 !important;
 }
 
 /* responsive minimal */

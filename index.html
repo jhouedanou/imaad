@@ -49,31 +49,34 @@
     }
 
     .hero-eyebrow {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 2.5px;
+      letter-spacing: 0.6px;
       text-transform: uppercase;
       color: var(--gold);
       display: flex;
       align-items: center;
       gap: 12px;
       margin-bottom: 20px;
+      font-family: var(--font-heading);
     }
 
     .hero-eyebrow::before {
       content: '';
       display: block;
-      width: 32px;
-      height: 1px;
+      width: 35px;
+      height: 2px;
       background: var(--gold);
     }
 
     .hero h1 {
-      font-size: 46px;
-      font-weight: 800;
+      font-size: 52px;
+      font-weight: 900;
       color: var(--white);
-      line-height: 1.12;
+      line-height: 1.15;
+      letter-spacing: -0.52px;
       margin-bottom: 24px;
+      font-family: var(--font-heading);
     }
 
     .hero h1 span { color: var(--gold); }
@@ -160,44 +163,88 @@
 
     /* ── EXPERTISE ── */
     .section-expertise {
-      background: var(--navy);
-      padding: 80px 60px;
+      background: var(--navy-mid);
+      padding: 100px 60px 80px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .expertise-inner {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 80px;
-      align-items: start;
+    .expertise-grid-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: repeating-linear-gradient(
+        to right,
+        rgba(112,112,112,0.09) 0,
+        rgba(112,112,112,0.09) 1px,
+        transparent 1px,
+        transparent 21px
+      );
+      opacity: 0.6;
     }
 
-    .expertise-left h2 {
-      font-size: 30px;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 24px;
-      line-height: 1.25;
+    .expertise-identity {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto 80px;
+      text-align: center;
     }
 
-    .expertise-left p {
-      font-size: 14px;
-      color: rgba(255,255,255,0.6);
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    .expertise-right h3 {
-      font-size: 20px;
+    .expertise-identity h2 {
+      font-size: 33px;
       font-weight: 700;
-      color: var(--gold);
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.33px;
+      margin-bottom: 28px;
+      font-family: var(--font-heading);
+    }
+
+    .expertise-identity p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      margin-bottom: 14px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .expertise-header {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      text-align: right;
+      padding-right: 60px;
+    }
+
+    .expertise-header .section-label {
       margin-bottom: 8px;
     }
 
-    .expertise-right .domains-subtitle {
+    .expertise-title {
+      font-size: 33px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: -0.33px;
+      margin-bottom: 12px;
+      font-family: var(--font-heading);
+    }
+
+    .domains-subtitle {
       font-size: 13px;
-      color: rgba(255,255,255,0.55);
-      margin-bottom: 28px;
-      line-height: 1.5;
+      color: #f4f4f4;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .domains-cards {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1080px;
+      margin: 0 auto;
     }
 
     /* ── PROJETS PREVIEW ── */
@@ -338,22 +385,22 @@
       </div>
 
       <!-- Mini stats sous le CTA -->
-      <div style="display:flex; gap:48px; margin-top:48px; padding-top:32px; border-top:1px solid rgba(255,255,255,0.1);">
-        <div>
-          <div style="font-size:22px;font-weight:800;color:var(--white);">+1.000.000.000 €</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:3px;">Mobilisé depuis 2020</div>
+      <div class="hero-stats-row">
+        <div class="hero-stat">
+          <div class="hero-stat-value">+1.000.000.000 €</div>
+          <div class="hero-stat-label">Mobilisé depuis 2020</div>
         </div>
-        <div>
-          <div style="font-size:22px;font-weight:800;color:var(--white);">+3</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:3px;">Projets PPP structurés</div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">+3</div>
+          <div class="hero-stat-label">Projets PPP structurés</div>
         </div>
-        <div>
-          <div style="font-size:22px;font-weight:800;color:var(--white);">15+</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:3px;">Pays couverts</div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">15+</div>
+          <div class="hero-stat-label">Pays couverts</div>
         </div>
-        <div>
-          <div style="font-size:22px;font-weight:800;color:var(--white);">6</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:3px;">Bureaux régionaux</div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">6</div>
+          <div class="hero-stat-label">Bureaux Régionaux</div>
         </div>
       </div>
     </div>
@@ -362,35 +409,35 @@
     <div class="hero-stats-card">
       <div class="contact-rapide">Contact rapide</div>
       <div class="stat-row">
-        <div style="font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:6px;">Demande institutionnelle</div>
-        <div style="font-size:13px;color:rgba(255,255,255,0.65);">Pour tout projet souverain ou financement structuré</div>
+        <div class="stat-row-label">Demande institutionnelle</div>
+        <div class="stat-row-text">Pour tout projet souverain ou financement structuré</div>
       </div>
       <div class="stat-row">
-        <div style="font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:6px;">Partenariat PPP</div>
-        <div style="font-size:13px;color:rgba(255,255,255,0.65);">Développement, structuration et closing</div>
+        <div class="stat-row-label">Partenariat PPP</div>
+        <div class="stat-row-text">Développement, structuration et closing</div>
       </div>
-      <a href="contact.html" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:20px;padding:14px;">Contacter nos experts →</a>
+      <a href="contact.html" class="btn btn-gold btn-full">Contacter nos experts →</a>
     </div>
   </section>
 
   <!-- TICKER -->
   <div class="ticker">
     <div class="ticker-track">
-      <span>NOUS BÂTIR ZERÉLA PAYS</span>
-      <span>NOUS BÂTIR ZERÉLA PAYS</span>
-      <span>NOUS BÂTIR ZERÉLA PAYS</span>
-      <span>NOUS BÂTIR ZERÉLA PAYS</span>
-      <span>NOUS BÂTIR ZERÉLA PAYS</span>
-      <span>NOUS BÂTIR ZERÉLA PAYS</span>
-      <span>NOUS BÂTIR ZERÉLA PAYS</span>
-      <span>NOUS BÂTIR ZERÉLA PAYS</span>
+      <span>News bande déroulante</span>
+      <span>News bande déroulante</span>
+      <span>News bande déroulante</span>
+      <span>News bande déroulante</span>
+      <span>News bande déroulante</span>
+      <span>News bande déroulante</span>
+      <span>News bande déroulante</span>
+      <span>News bande déroulante</span>
     </div>
   </div>
 
   <!-- VALEURS -->
   <section class="section-valeurs" id="valeurs">
     <div class="section-header">
-      <div class="section-label">Notre mission</div>
+      <div class="section-label">NOTRE MODÈLE</div>
       <h2>Une banque d'affaires au Service<br>du développement durable</h2>
       <p class="subtitle">
         Imaad Financial Group place la finance au service du développement, de la compétitivité et de la durabilité. Nous combinons vision internationale et exécution locale.
@@ -399,77 +446,76 @@
     <div class="grid-3">
       <div class="value-card">
         <div class="value-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/></svg>
+          <img src="assets/icon-souverainete.svg" alt="">
         </div>
         <h3>Souveraineté</h3>
         <p>Renforcer l'autonomie financière des États et des institutions publiques à travers des solutions de financement innovantes et responsables.</p>
       </div>
       <div class="value-card">
         <div class="value-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          <img src="assets/icon-impact.svg" alt="">
         </div>
         <h3>Impact</h3>
-        <p>Des projets réels créateurs d'emplois et de valeur sociale, depuis les ODD et les objectifs de développement régional.</p>
+        <p>Des projets durables créateurs d'emplois et de valeur sociale, alignés sur les ODD et les objectifs de développement régional.</p>
       </div>
       <div class="value-card">
         <div class="value-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          <img src="assets/icon-excellence.svg" alt="">
         </div>
         <h3>Excellence</h3>
-        <p>Une exécution de haute précision portée par des équipes plurinationales et une expertise financière internationale.</p>
+        <p>Une exécution de haute précision portée par des équipes pluridisciplinaires et une expertise financière internationale.</p>
       </div>
     </div>
   </section>
 
   <!-- EXPERTISE / DOMAINES -->
   <section class="section-expertise" id="domaines">
-    <div class="expertise-inner">
-      <div class="expertise-left">
-        <div class="section-label light">Notre expertise</div>
-        <h2>Une banque d'affaires Panafricaine<br>à vocation internationale</h2>
-        <p>
-          Depuis 2021, Imaad Financial Group est un acteur de référence dans la structuration et le financement de projets stratégiques sur les marchés émergents.
-        </p>
-        <p>
-          Notre approche combine expertise financière de haut niveau, connaissance des marchés locaux et réseau de partenaires institutionnels de premier plan.
-        </p>
+    <div class="expertise-grid-bg"></div>
+    <div class="expertise-identity">
+      <h2>Une banque d'affaires Panafricaine<br>à vocation internationale</h2>
+      <p>
+        Depuis 2021, Imaad Financial Group est un acteur de référence dans la structuration et le financement de projets stratégiques sur les marchés émergents.
+      </p>
+      <p>
+        Notre approche combine expertise financière de haut niveau, connaissance des marchés locaux et réseau de partenaires institutionnels de premier plan.
+      </p>
+    </div>
+    <div class="expertise-header">
+      <div class="section-label light">Notre expertise</div>
+      <h2 class="expertise-title">Domaines d'Excellence</h2>
+      <p class="domains-subtitle">Solutions sur-mesure pour États, entreprises et investisseurs<br>à travers trois axes stratégiques complémentaires.</p>
+    </div>
+    <div class="domains-cards">
+      <div class="domain-card domain-card--active">
+        <div class="domain-num">01</div>
+        <h3>Financement Souverain</h3>
+        <ul>
+          <li>Mobilisation de financements concessionnels</li>
+          <li>Restructuration et optimisation de la dette publique</li>
+          <li>Appuis budgétaires pour États et institutions</li>
+          <li>Mobilisation de financements multilatéraux</li>
+          <li>Fonds souverains et gestion patrimoniale</li>
+        </ul>
       </div>
-      <div class="expertise-right">
-        <h3>Domaines d'Excellence</h3>
-        <p class="domains-subtitle">Solutions sur mesure pour États, entreprises et investisseurs à travers nos trois stratégies complémentaires.</p>
-        <div style="display:grid; gap:16px;">
-          <div class="domain-card">
-            <div class="domain-num">01</div>
-            <h3>Financement Souverain</h3>
-            <ul>
-              <li>Mobilisation de financements concessionnels</li>
-              <li>Restructuration et optimisation de la dette publique</li>
-              <li>Appuis budgétaires pour États et institutions</li>
-              <li>Mobilisation de financements multilatéraux</li>
-              <li>Fonds souverains et gestion patrimoniale</li>
-            </ul>
-          </div>
-          <div class="domain-card">
-            <div class="domain-num">02</div>
-            <h3>Partenariats Public-Privé (PPP)</h3>
-            <ul>
-              <li>Conseil structuration et développement d'infrastructures</li>
-              <li>Routes, hôpitaux, énergie, eau, agro-accompagnement</li>
-              <li>Montage juridique et financier des projets</li>
-              <li>Accompagnement du closing financier</li>
-            </ul>
-          </div>
-          <div class="domain-card">
-            <div class="domain-num">03</div>
-            <h3>Corporate & Trade Finance</h3>
-            <ul>
-              <li>Financement CAPEX & OPEX pour entreprises</li>
-              <li>Solutions logistique et immobilier</li>
-              <li>Structures adaptées aux marchés émergents</li>
-              <li>Accompagnement en fusions et acquisitions</li>
-            </ul>
-          </div>
-        </div>
+      <div class="domain-card">
+        <div class="domain-num">02</div>
+        <h3>Partenariats Public-Privé (PPP)</h3>
+        <ul>
+          <li>Conseil structuration et développement d'infrastructures</li>
+          <li>Routes, hôpitaux, énergie, eau, agro-accompagnement</li>
+          <li>Montage juridique et financier des projets</li>
+          <li>Accompagnement du closing financier</li>
+        </ul>
+      </div>
+      <div class="domain-card">
+        <div class="domain-num">03</div>
+        <h3>Corporate &amp; Trade Finance</h3>
+        <ul>
+          <li>Financement CAPEX &amp; OPEX pour entreprises</li>
+          <li>Solutions logistique et immobilier</li>
+          <li>Structures adaptées aux marchés émergents</li>
+          <li>Accompagnement en fusions et acquisitions</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -478,13 +524,13 @@
   <section class="section-projets">
     <div class="section-header">
       <div class="section-label">Réalisations</div>
-      <h2>Projets & Impact</h2>
+      <h2>Projets &amp; Impact</h2>
     </div>
     <div class="grid-3">
       <!-- Card 1 -->
       <div class="card-project">
         <div class="card-project-img">
-          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80" alt="Infrastructure routière">
+          <img src="assets/projet-1-infrastructure.png" alt="Infrastructure routière">
           <div class="card-project-badge">
             <div class="badge-country">🇨🇮 Côte d'Ivoire</div>
             <div class="badge-status badge-closed">Closé 2023</div>
@@ -499,7 +545,7 @@
       <!-- Card 2 -->
       <div class="card-project">
         <div class="card-project-img">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Immobilier Guinée">
+          <img src="assets/projet-3-immobilier.png" alt="Immobilier Guinée">
           <div class="card-project-badge">
             <div class="badge-country">🇬🇳 Guinée</div>
             <div class="badge-status badge-closed">Closé 2024</div>
@@ -514,10 +560,10 @@
       <!-- Card 3 -->
       <div class="card-project">
         <div class="card-project-img">
-          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" alt="Santé Djibouti">
+          <img src="assets/projet-2-sante.png" alt="Santé Djibouti">
           <div class="card-project-badge">
             <div class="badge-country">🇩🇯 Djibouti</div>
-            <div class="badge-status badge-pipeline" style="background:#3b82f6;">T3 2025</div>
+            <div class="badge-status badge-pipeline">T3 2025</div>
           </div>
         </div>
         <div class="card-project-body">
@@ -535,14 +581,14 @@
   <!-- TEAM PREVIEW -->
   <section class="section-team-preview">
     <div class="section-header">
-      <div class="section-label">Gouvernance</div>
-      <h2>Équipe & Gouvernance</h2>
+      <div class="section-label">Leadership</div>
+      <h2>Équipe &amp; Gouvernance</h2>
     </div>
     <p class="subtitle">Leadership, intégrité et influence intercontinentale — une équipe dirigeante forgée par l'expérience internationale.</p>
     <div class="grid-4">
       <div class="team-card">
         <div class="team-card-img">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="Pierre Wolf">
+          <img src="assets/team-3.png" alt="Pierre Wolf">
         </div>
         <div class="team-card-body">
           <div class="name">Pierre WOLF</div>
@@ -554,31 +600,31 @@
       </div>
       <div class="team-card">
         <div class="team-card-img">
-          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="Issa Mehmet N'Diaye">
+          <img src="assets/team-1.png" alt="Issa Mehmet N'Diaye">
         </div>
         <div class="team-card-body">
           <div class="name">Issa Mehmet N'DIAYE</div>
-          <div class="title-fr">Co-Fondateur & Directeur Général</div>
-          <div class="title-en">Co-Founder, Chairman & CEO</div>
+          <div class="title-fr">Co-Fondateur &amp; Directeur Général</div>
+          <div class="title-en">Co-Founder, Chairman &amp; CEO</div>
           <p>Architecte de la stratégie d'ensemble du groupe, 20 ans en finance structurée.</p>
           <a href="#" class="linkedin-link">LinkedIn</a>
         </div>
       </div>
       <div class="team-card">
         <div class="team-card-img">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Rym Moulaye-Idriss">
+          <img src="assets/team-2.png" alt="Rym Moulaye-Idriss">
         </div>
         <div class="team-card-body">
           <div class="name">Rym MOULAYE-IDRISS</div>
-          <div class="title-fr">Co-Fondatrice & Directrice Générale</div>
-          <div class="title-en">Co-Founder & Deputy CEO</div>
+          <div class="title-fr">Co-Fondatrice &amp; Directrice Générale</div>
+          <div class="title-en">Co-Founder &amp; Deputy CEO</div>
           <p>Spécialiste des financements multilatéraux et des PPP.</p>
           <a href="#" class="linkedin-link">LinkedIn</a>
         </div>
       </div>
       <div class="team-card">
         <div class="team-card-img">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Olutobi Osibodu">
+          <img src="assets/team-4.png" alt="Olutobi Osibodu">
         </div>
         <div class="team-card-body">
           <div class="name">Olutobi OSIBODU</div>
@@ -590,7 +636,7 @@
       </div>
     </div>
     <div class="voir-tous">
-      <a href="equipe.html" class="btn btn-outline-gold" style="margin-top:20px;">Toute l'équipe</a>
+      <a href="equipe.html" class="btn btn-outline-gold btn-voir-tous">Toute l'équipe</a>
     </div>
   </section>
 
@@ -634,7 +680,7 @@
               <option>Sélectionner</option>
               <option>Financement souverain</option>
               <option>Partenariat PPP</option>
-              <option>Corporate & Trade</option>
+              <option>Corporate &amp; Trade</option>
               <option>Autre</option>
             </select>
           </div>
@@ -643,14 +689,14 @@
           <label class="form-label">Joindre un document</label>
           <div class="file-upload">
             <span class="file-upload-icon">📎</span>
-            <span style="font-size:13px;color:var(--text-muted);">Glisser un fichier ou cliquer</span>
+            <span class="file-upload-text">Glisser un fichier ou cliquer</span>
           </div>
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
           <textarea class="form-control" rows="4" placeholder="Décrivez votre projet ou votre demande..."></textarea>
         </div>
-        <button class="btn btn-gold" style="width:100%;justify-content:center;padding:14px;font-size:13px;">Envoyer la demande</button>
+        <button type="submit" class="btn btn-gold btn-full btn-submit">Envoyer la demande</button>
       </div>
     </div>
   </section>
