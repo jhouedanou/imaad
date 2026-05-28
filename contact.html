@@ -9,7 +9,6 @@
   <meta name="author" content="IMAAD Financial Group">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jhouedanou.github.io/imaad/contact.html">
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jhouedanou.github.io/imaad/contact.html">
   <meta property="og:title" content="Contact — IMAAD Financial Group">
@@ -17,217 +16,75 @@
   <meta property="og:image" content="https://jhouedanou.github.io/imaad/og-image.jpg">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="IMAAD Financial Group">
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact — IMAAD Financial Group">
   <meta name="twitter:description" content="Contactez IMAAD Financial Group pour vos projets en financement souverain, PPP ou Corporate Finance. Réponse sous 48h.">
   <meta name="twitter:image" content="https://jhouedanou.github.io/imaad/og-image.jpg">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .contact-page {
-      padding: 100px 60px 120px;
-      background: var(--white);
-    }
-
-    .contact-inner {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 80px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .contact-left h1 {
-      font-size: 38px;
-      font-weight: 800;
-      margin-bottom: 16px;
-      line-height: 1.15;
-    }
-
-    .contact-left p {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 36px;
-      max-width: 340px;
-    }
-
-    .contact-info-row {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .contact-info-icon {
-      width: 48px;
-      height: 48px;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      flex-shrink: 0;
-    }
-
-    .contact-info-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      display: block;
-      margin-bottom: 3px;
-    }
-
-    .contact-info-value {
-      font-size: 14px;
-      color: var(--text-dark);
-    }
-
-    /* FORM CARD */
-    .form-card {
-      background: var(--cream);
-      padding: 42px 40px;
-      border: 1px solid var(--border);
-    }
-
-    .form-card-title {
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-align: center;
-      color: var(--text-dark);
-      margin-bottom: 32px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form-group { margin-bottom: 20px; }
-
-    .file-upload-zone {
-      width: 100%;
-      padding: 13px 16px;
-      border: 1px solid var(--border);
-      background: var(--white);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      transition: border-color 0.2s;
-    }
-
-    .file-upload-zone:hover { border-color: var(--gold); }
-
-    textarea.form-control { resize: vertical; min-height: 110px; }
-
-    .btn-submit {
-      width: 100%;
-      padding: 15px;
-      background: var(--gold);
-      color: var(--white);
-      font-family: var(--font);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .btn-submit:hover { background: #a07b20; }
-
-    /* Spacer top for page without hero */
-    .page-spacer {
-      background: var(--navy);
-      height: 20px;
-    }
-  </style>
 </head>
 <body>
   <div id="navbar-mount"></div>
-  <div class="page-spacer"></div>
 
-  <section class="contact-page">
-    <div class="contact-inner">
-
-      <!-- LEFT -->
-      <div class="contact-left">
+  <section class="contact-zeplin">
+    <div class="contact-zeplin-grid">
+      <div class="contact-zeplin-left">
         <div class="section-label">Travaillons ensemble</div>
         <h1>Nous contacter</h1>
-        <p>Pour toute demande institutionnelle, partenariat stratégique ou soumission de projet, notre équipe vous répondra dans les 48 heures.</p>
+        <p class="lead">Pour toute demande institutionnelle, partenariat stratégique ou soumission de projet, notre équipe vous répondra dans les 48 heures.</p>
 
-        <div class="contact-info-row">
-          <div class="contact-info-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="4" width="20" height="16" rx="2"/>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/>
-            </svg>
+        <div class="contact-info-card">
+          <div class="icon-box">
+            <img src="assets/icon-email.svg" alt="">
           </div>
           <div>
-            <span class="contact-info-label">E-Mail</span>
-            <a href="mailto:infos@imaadholding.com" class="contact-info-value">infos@imaadholding.com</a>
+            <div class="info-label">E-mail</div>
+            <a href="mailto:infos@imaadholding.com" class="info-value">infos@imaadholding.com</a>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT -->
-      <div class="form-card">
-        <div class="form-card-title">Envoyer une demande</div>
-
+      <form class="contact-form-zeplin">
+        <h3>Envoyer une demande</h3>
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Nom complet <span style="color:var(--gold);">*</span></label>
-            <input type="text" class="form-control" placeholder="Rym Moulaye">
+            <label class="form-label" for="contact-name">Nom complet <span class="req">*</span></label>
+            <input type="text" id="contact-name" class="form-control" placeholder="Rym Moulaye" required>
           </div>
           <div class="form-group">
-            <label class="form-label">Email <span style="color:var(--gold);">*</span></label>
-            <input type="email" class="form-control" placeholder="Rym Moulaye@imaadfg.com">
+            <label class="form-label" for="contact-email">Email <span class="req">*</span></label>
+            <input type="email" id="contact-email" class="form-control" placeholder="Rym Moulaye@imaadfg.com" required>
           </div>
         </div>
-
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Organisation</label>
-            <input type="text" class="form-control" placeholder="Votre organisation">
+            <label class="form-label" for="contact-org">Organisation</label>
+            <input type="text" id="contact-org" class="form-control" placeholder="Votre organisation">
           </div>
           <div class="form-group">
-            <label class="form-label">Objet de la demande</label>
-            <select class="form-control">
-              <option value="">Sélectionner</option>
+            <label class="form-label" for="contact-objet">Objet de la demande</label>
+            <select id="contact-objet" class="form-control">
+              <option>Sélectionner</option>
               <option>Financement souverain</option>
-              <option>Partenariat Public-Privé</option>
-              <option>Corporate & Trade Finance</option>
-              <option>Partenariat stratégique</option>
+              <option>Partenariat PPP</option>
+              <option>Corporate &amp; Trade</option>
               <option>Autre</option>
             </select>
           </div>
         </div>
-
         <div class="form-group">
-          <label class="form-label">Joindre un document</label>
-          <label class="file-upload-zone">
-            <span style="font-size:20px;">📎</span>
-            <span style="font-size:13px;color:var(--text-muted);" id="file-label">Glisser un fichier ou cliquer pour téléverser</span>
-            <input type="file" style="display:none;" onchange="document.getElementById('file-label').textContent = this.files[0]?.name || 'Glisser un fichier'">
-          </label>
+          <label class="form-label" for="contact-file">Joindre un document</label>
+          <div class="file-upload">
+            <span class="file-upload-icon">📎</span>
+            <span class="file-upload-text">Glisser un fichier ou cliquer</span>
+            <input type="file" id="contact-file" hidden>
+          </div>
         </div>
-
         <div class="form-group">
-          <label class="form-label">Message</label>
-          <textarea class="form-control" placeholder="Décrivez votre projet ou votre demande..."></textarea>
+          <label class="form-label" for="contact-msg">Message</label>
+          <textarea id="contact-msg" class="form-control" rows="4" placeholder="Décrivez votre projet ou votre demande…"></textarea>
         </div>
-
-        <button class="btn-submit" onclick="handleSubmit(this)">Envoyer la demande</button>
-      </div>
-
+        <button type="submit" class="btn btn-gold">Envoyer la demande</button>
+      </form>
     </div>
   </section>
 
@@ -237,15 +94,6 @@
   <script>
     document.getElementById('navbar-mount').innerHTML = IMAAD_NAV('contact');
     document.getElementById('footer-mount').innerHTML = IMAAD_FOOTER();
-
-    function handleSubmit(btn) {
-      btn.textContent = 'Envoi en cours...';
-      btn.style.background = '#888';
-      setTimeout(() => {
-        btn.textContent = '✓ Demande envoyée';
-        btn.style.background = '#10b981';
-      }, 1500);
-    }
   </script>
 </body>
 </html>
