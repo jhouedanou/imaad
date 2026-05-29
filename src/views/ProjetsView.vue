@@ -1,5 +1,6 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import site from '../content/site.json'
 import PageHero from '../components/PageHero.vue'
 import StatsBar from '../components/StatsBar.vue'
@@ -24,7 +25,28 @@ const SECTOR_CATS = {
 const catsFor = (it) =>
   it.cats || (it.cat ? [it.cat] : SECTOR_CATS[(it.sector || '').toLowerCase()] || ['corporate'])
 
-const activeCat = ref('tous')
+const route = useRoute()
+const router = useRouter()
+const validCats = p.filters.map((f) => f.cat)
+
+// filtre initial depuis l'URL (?filtre=ppp), sinon "tous"
+const initial = validCats.includes(route.query.filtre) ? route.query.filtre : 'tous'
+const activeCat = ref(initial)
+
+// sélection -> met à jour l'URL (partageable + bouton retour)
+function setCat(cat) {
+  activeCat.value = cat
+  router.replace({ query: cat === 'tous' ? {} : { filtre: cat } })
+}
+
+// navigation arrière/avant -> resynchronise le filtre
+watch(
+  () => route.query.filtre,
+  (f) => {
+    activeCat.value = validCats.includes(f) ? f : 'tous'
+  }
+)
+
 const filtered = computed(() =>
   activeCat.value === 'tous'
     ? p.items
@@ -47,7 +69,7 @@ const filtered = computed(() =>
       type="button"
       class="filter-pill"
       :class="{ active: activeCat === f.cat }"
-      @click="activeCat = f.cat"
+      @click="setCat(f.cat)"
     >{{ f.label }}</button>
   </div>
   <div class="projets-section-header container-fluid">
