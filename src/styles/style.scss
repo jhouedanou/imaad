@@ -41,8 +41,9 @@ ul { list-style: none; }
 /* ─── NAVBAR ─── */
 .navbar {
   background: var(--navy);
-  padding: 0 60px;
   z-index: 100;
+  height:188px;
+  padding:0 60px;
   font-family: var(--font-heading);
 
   .row { width: 100%; align-items: center; min-height: 80px; }
@@ -120,10 +121,10 @@ ul { list-style: none; }
   height: 56px;
 }
 
-/* ─── FOOTER ─── */
+/* ─── FOOTER (Zeplin spec) ─── */
 footer {
-  background: var(--navy);
-  color: rgba(255,255,255,0.75);
+  background: var(--navy-mid);
+  color: #d4e0f5;
   padding: 60px 60px 0;
 }
 
@@ -132,54 +133,62 @@ footer {
   grid-template-columns: 1.8fr 1fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 50px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(112,112,112,0.5);
 }
 
 .footer-brand p {
+  font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
   font-size: 13px;
-  color: var(--gold-light);
-  margin-top: 8px;
+  color: var(--gold);
+  margin-top: 10px;
+  letter-spacing: -0.1px;
   line-height: 1.5;
 }
 
 .footer-brand .footer-sep {
-  width: 32px;
-  height: 2px;
+  width: 30px;
+  height: 1px;
   background: var(--gold);
   margin-top: 16px;
 }
 
 .footer-brand .logo-name {
-  font-size: 16px;
-  font-weight: 800;
+  font-family: var(--font);
+  font-size: 18px;
+  font-weight: 600;
   color: var(--white);
-  letter-spacing: 1px;
+  letter-spacing: -0.18px;
 }
 
 .footer-col h4 {
+  font-family: var(--font-heading);
   font-size: 10px;
   font-weight: 700;
   color: var(--gold);
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .footer-col ul li {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .footer-col ul li a {
-  color: rgba(255,255,255,0.7);
+  font-family: var(--font);
+  color: #d4e0f5;
   font-size: 13px;
+  letter-spacing: -0.13px;
   transition: color 0.2s;
 }
 
 .footer-col ul li a:hover { color: var(--gold); }
 
 .footer-col .contact-email {
+  font-family: var(--font);
   font-size: 13px;
-  color: rgba(255,255,255,0.7);
+  letter-spacing: -0.13px;
+  color: #d4e0f5;
 }
 
 .footer-bureaux {
@@ -187,48 +196,63 @@ footer {
 }
 
 .footer-bureaux h5 {
+  font-family: var(--font-heading);
   font-size: 10px;
   font-weight: 700;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 2px;
+  color: #7082a2;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .bureaux-flags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px 14px;
 }
 
 .bureaux-flags span {
-  font-size: 12px;
-  color: rgba(255,255,255,0.6);
+  font-family: var(--font);
+  font-size: 13px;
+  letter-spacing: -0.13px;
+  color: #d4e0f5;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
+}
+
+.bureau-flag {
+  width: 18px;
+  height: 12px;
+  object-fit: cover;
+  border-radius: 1px;
+  flex-shrink: 0;
 }
 
 .footer-bottom {
-  padding: 20px 0;
+  padding: 24px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .footer-bottom p {
-  font-size: 12px;
-  color: rgba(255,255,255,0.4);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 500;
+  color: #5a6881;
 }
 
 .footer-bottom-links {
   display: flex;
-  gap: 20px;
+  gap: 24px;
 }
 
 .footer-bottom-links a {
-  font-size: 12px;
-  color: rgba(255,255,255,0.4);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 500;
+  color: #5a6881;
   transition: color 0.2s;
 }
 
@@ -241,14 +265,14 @@ footer {
 }
 
 .footer-social a {
-  width: 34px;
-  height: 34px;
-  border: 1px solid rgba(255,255,255,0.2);
+  width: 30px;
+  height: 30px;
+  border: 1px solid #5a6881;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255,255,255,0.5);
+  color: #5a6881;
   transition: all 0.2s;
 }
 
@@ -351,10 +375,11 @@ footer {
   to { transform: translateX(-50%); }
 }
 
-/* ─── CARDS ─── */
+/* ─── CARDS (Zeplin spec) ─── */
 .card-project {
   background: var(--white);
-  border: 1px solid var(--border);
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
   overflow: hidden;
   transition: box-shadow 0.2s;
 }
@@ -363,7 +388,7 @@ footer {
 
 .card-project-img {
   position: relative;
-  height: 180px;
+  height: 167px;
   overflow: hidden;
 }
 
@@ -375,57 +400,81 @@ footer {
 
 .card-project-badge {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 14px;
+  left: 21px;
   display: flex;
-  gap: 6px;
-  align-items: center;
+  gap: 9px;
+  align-items: stretch;
 }
 
 .badge-country {
-  background: rgba(13,27,42,0.85);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 2px;
   color: var(--white);
-  font-size: 11px;
+  font-family: var(--font-heading);
+  font-size: 13px;
   font-weight: 600;
-  padding: 3px 8px;
+  letter-spacing: 0.13px;
+  text-transform: uppercase;
+  padding: 0 12px;
+  height: 34px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
+}
+
+.badge-flag {
+  width: 20px !important;
+  height: 14px !important;
+  object-fit: cover;
+  border-radius: 1px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .badge-status {
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  border-radius: 2px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.13px;
+  padding: 0 14px;
+  height: 34px;
+  display: flex;
+  align-items: center;
 }
 
-.badge-closed { background: var(--gold); color: var(--navy); }
-.badge-open { background: #10b981; color: var(--white); }
-.badge-pipeline { background: #3b82f6; color: var(--white); }
+.badge-closed   { background: rgba(193,162,88,0.18); color: var(--gold); }
+.badge-open     { background: rgba(16,185,129,0.18); color: #10b981; }
+.badge-pipeline { background: rgba(59,130,246,0.18); color: #3b82f6; }
 
-.card-project-body { padding: 16px; }
+.card-project-body { padding: 13px 21px 20px; }
 
 .card-project-body .sector {
-  font-size: 11px;
+  font-family: var(--font);
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 4px;
+  letter-spacing: -0.13px;
+  color: #000;
+  margin-bottom: 6px;
 }
 
 .card-project-body .amount {
+  font-family: var(--font-heading);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: 1px;
   color: var(--gold);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .card-project-body p {
+  font-family: var(--font);
   font-size: 13px;
-  color: var(--text-muted);
+  font-weight: 300;
+  letter-spacing: -0.13px;
+  color: #707070;
   line-height: 1.5;
 }
 
@@ -507,12 +556,6 @@ footer {
   overflow: hidden;
 }
 
-.page-hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(13,27,42,0.95) 60%, transparent);
-}
 
 .page-hero-bg {
   position: absolute;
@@ -539,15 +582,14 @@ footer {
 .team-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
 
 .team-card-img {
-  height: 220px;
   overflow: hidden;
-  background: var(--cream);
+  background: white;
 }
 
 .team-card-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center top;
 }
 
@@ -598,8 +640,9 @@ footer {
 }
 
 .team-card-body .linkedin-email {
-  font-size: 11px;
-  color: var(--text-muted);
+  font-size: 10px;
+  color: #c1a258;
+  text-transform:uppercase !important;
 }
 
 /* ─── FORM ─── */
@@ -814,7 +857,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-submit {
   font-size: 13px;
-  margin-top: 0;
+    margin-top: 0;
+  color:#0e1b2e !important;
 }
 
 .btn-voir-tous {
@@ -854,6 +898,23 @@ h1, h2, h3, h4, h5, h6 {
 /* ─── SECTION TEAM background fix ─── */
 .section-team-preview {
   background: var(--cream) !important;
+  .section-label{
+    padding-bottom:12px !important;
+  }
+  .subtitle{
+    max-width:521px !important;
+    margin:0 auto !important;
+      font-family: OpenSans;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: -0.13px;
+  text-align: center;
+  color: #707070;
+    padding:0 0 40px 0 !important;
+  }
 }
 
 /* ─── TICKER text fix ─── */
@@ -892,6 +953,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-hero--team .page-hero-overlay {
   background: rgba(17, 31, 56, 0.83);
+  width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* ─── TEAM PAGE ─── */
@@ -957,20 +1024,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stats-bar--zeplin .stat-value {
-  font-size: 37px;
+  font-size: 30px;
   font-weight: 900;
   color: var(--navy-mid);
   line-height: 1.15;
   letter-spacing: -0.37px;
   font-family: var(--font-heading);
+  text-align:center !important;
 }
 
 .stats-bar--zeplin .stat-label {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--navy-mid);
-  margin-top: 8px;
-  font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 500;
+    color: #111f38;
+    margin-top: 8px;
+    font-family: var(--font-heading);
+    text-align: center;
+    opacity: 1;
 }
 
 .filters-bar--pills {
@@ -1051,9 +1121,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.13px;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 2px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .card-project--zeplin .badge-status {
@@ -1100,6 +1173,41 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
 }
 
+/* ─── EN-TÊTE SECTION PROJETS (page projets, Zeplin) ─── */
+.projets-section-header {
+  padding: 60px 60px 0;
+  background: var(--white);
+
+  .section-label {
+    text-align: left !important;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.33px;
+    color: var(--navy);
+    text-align: left;
+    margin: 0;
+  }
+}
+
+/* ─── GRILLE PROJETS (page projets, Zeplin) ─── */
+.section-projets-grid {
+  padding: 60px 60px 80px;
+  background: var(--white);
+}
+
+.section-projets-grid .grid-3 {
+  gap: 34px;
+  max-width: 1265px;
+  margin: 0 auto;
+}
+
 /* ─── CONTACT PAGE ZEPLIN ─── */
 .contact-zeplin {
   padding: 80px 60px;
@@ -1130,9 +1238,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-zeplin-left .lead {
+  font-family: var(--font);
   font-size: 13px;
-  color: var(--text-dark);
-  line-height: 1.6;
+  color: #707070;
+  line-height: 1.54;
+  letter-spacing: -0.13px;
+  max-width: 420px;
   margin-bottom: 40px;
 }
 
@@ -1146,7 +1257,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 47px;
   height: 48px;
   background: #f7f5f0;
-  border: 1px solid #dedfab;
+  border: 1px solid #decfab;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -1168,8 +1279,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-info-card .info-value {
+  font-family: var(--font);
   font-size: 15px;
   font-weight: 300;
+  letter-spacing: -0.15px;
   color: #000;
   line-height: 1.6;
 }
@@ -1186,10 +1299,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   font-weight: 700;
   color: #000;
-  text-align: center;
-  margin-bottom: 28px;
+  text-align: left;
+  letter-spacing: -0.13px;
+  margin-bottom: 24px;
   text-transform: none;
-  letter-spacing: 0;
 }
 
 .contact-form-zeplin .form-label {
@@ -1197,8 +1310,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 10px;
   font-weight: 700;
   color: #000;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-transform: none;
+  letter-spacing: 0;
   margin-bottom: 6px;
 }
 
@@ -1233,17 +1346,54 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-/* responsive minimal */
+/* ─── RESPONSIVE ─── */
+/* Tablette */
+@media (max-width: 991px) {
+  .hero {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+    padding: 40px 24px !important;
+  }
+  .hero h1 { font-size: 38px !important; }
+
+  .grid-4, .team-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .domains-cards { grid-template-columns: 1fr !important; }
+  .expertise-header .grid-2 { grid-template-columns: 1fr !important; }
+
+  .contact-preview-grid,
+  .contact-zeplin-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .page-hero-title { font-size: 40px !important; }
+  .section-expertise { padding: 60px 24px !important; }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  .navbar { padding: 0 20px; }
-  .navbar-nav { display: none; }
   .section, .section-sm { padding: 50px 20px; }
-  .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .grid-2 { grid-template-columns: 1fr; }
-  .stats-bar { flex-wrap: wrap; gap: 20px; padding: 20px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .hero { padding: 50px 20px; }
-  .page-hero { padding: 50px 20px; }
+  .section-valeurs,
+  .section-team-preview,
+  .section-contact-preview,
+  .section-projets,
+  .section-projets-grid,
+  .projets-section-header,
+  .contact-zeplin { padding-left: 20px !important; padding-right: 20px !important; }
+
+  .grid-2, .grid-3, .grid-4, .team-grid { grid-template-columns: 1fr !important; }
+
+  .stats-bar { flex-wrap: wrap; gap: 20px; padding: 24px 20px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  footer { padding: 40px 24px 0; }
+  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+
+  .filters-bar--pills { padding: 20px; }
+
+  .hero { padding: 40px 20px; }
+  .hero h1 { font-size: 32px !important; }
+  .page-hero { padding: 50px 24px; }
+  .page-hero-title { font-size: 32px !important; }
 }
 .page-home{
    background: url("/imaad/assets/bgHome.svg") no-repeat 47vw 4vh /53vw, linear-gradient(129deg, #0e1b2e 36%, #374862 138%);
@@ -1251,5 +1401,51 @@ background-attachment: fixed;
 
   .navbar{
     background:transparent;
+  }
+}
+
+.contact-preview-left{
+  .section-label{
+    text-align:left !important;
+    padding-bottom:12px !important;
+  }
+}
+
+.page-projets{
+  .page-hero{
+    background:url("/imaad/assets/bgProjets.jpg");
+    background-size:cover;
+  }
+}
+.page-equipe{
+  background-color: #f8f6f2;
+
+  .page-hero{
+    background:url("/imaad/assets/bgEquipe.jpg");
+    background-size:cover;
+     .section-label{
+    text-align:left !important;
+    padding-bottom:12px !important;
+    color:rgb(193, 162, 88) !important;
+  }
+  }
+}
+
+.page-hero-content{
+  max-width:720px;
+  margin:0 auto;
+  text-align:left !important;
+  .section-label{
+    text-align:left !important;
+    padding-bottom:12px !important;
+    color:rgb(193, 162, 88) !important;
+  }
+}
+
+.page-contact{
+  .section-label{
+    text-align:left !important;
+    padding-bottom:12px !important;
+    color:rgb(193, 162, 88) !important;
   }
 }

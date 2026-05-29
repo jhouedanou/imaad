@@ -5,7 +5,7 @@ import TeamCard from '../components/TeamCard.vue'
 import { useSeo } from '../composables/useSeo'
 
 const p = site.pages.equipe
-useSeo(p.meta)
+useSeo(p.meta);
 </script>
 
 <template>
@@ -27,3 +27,12 @@ useSeo(p.meta)
     </div>
   </section>
 </template>
+<style scoped lang="scss">
+.section-team {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0px;
+background-color: #f8f6f2;
+
+}
+</style>

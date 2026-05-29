@@ -7,25 +7,49 @@ const props = defineProps({
   mailto: { type: String, default: 'infos@imaadholding.com' }
 })
 
+const WEB3FORMS_KEY = '6992f20d-ab58-4755-9e1a-4b7f842d5b98'
+
 const fields = reactive({ name: '', email: '', org: '', objet: '', message: '' })
 const mini = reactive({ name: '', email: '' })
+const sending = ref(false)
+const status = ref(null) // 'success' | 'error' | null
 
-function buildMailto(data) {
-  const subject = encodeURIComponent(`[IMAAD] ${data.objet || 'Demande'} — ${data.name}`)
-  const body = encodeURIComponent(
-    `Nom: ${data.name}\nEmail: ${data.email}\nOrganisation: ${data.org || ''}\nObjet: ${data.objet || ''}\n\nMessage:\n${data.message || ''}`
-  )
-  return `mailto:${props.mailto}?subject=${subject}&body=${body}`
+async function submitWeb3(data, file) {
+  sending.value = true
+  status.value = null
+  const fd = new FormData()
+  fd.append('access_key', WEB3FORMS_KEY)
+  fd.append('name', data.name || '')
+  fd.append('email', data.email || '')
+  fd.append('subject', `[IMAAD] ${data.objet || 'Demande'} — ${data.name}`)
+  fd.append('organisation', data.org || '')
+  fd.append('objet', data.objet || '')
+  fd.append('message', data.message || '')
+  if (file) fd.append('attachment', file)
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
+    const json = await res.json()
+    status.value = res.ok && json.success ? 'success' : 'error'
+    if (status.value === 'success') {
+      Object.keys(data).forEach(k => (data[k] = ''))
+    }
+  } catch {
+    status.value = 'error'
+  } finally {
+    sending.value = false
+  }
 }
 
+const fileInput = ref(null)
+
 function submitForm() {
-  window.location.href = buildMailto(fields)
+  const file = fileInput.value?.files?.[0] || null
+  submitWeb3(fields, file)
 }
 
 function submitMini() {
-  const subject = encodeURIComponent(`[IMAAD] Contact rapide — ${mini.name}`)
-  const body = encodeURIComponent(`Nom: ${mini.name}\nEmail: ${mini.email}`)
-  window.location.href = `mailto:${props.mailto}?subject=${subject}&body=${body}`
+  submitWeb3({ name: mini.name, email: mini.email, objet: 'Contact rapide', message: '' }, null)
 }
 </script>
 

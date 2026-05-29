@@ -4,12 +4,12 @@ import { asset } from '../utils/asset'
 defineProps({
   member: { type: Object, required: true },
   compact: { type: Boolean, default: false }
-})
+});
 </script>
 
 <template>
   <div class="team-card">
-    <div class="team-card-img">
+    <div class="team-card-img white-bg">
       <img :src="asset(member.image)" :alt="member.name">
     </div>
     <div class="team-card-body" :class="{ 'team-card-body--compact': compact }">
@@ -28,8 +28,8 @@ defineProps({
         <span class="linkedin-email">{{ member.email }}</span>
       </template>
 
-      <a v-if="member.linkedin" :href="member.linkedin" class="linkedin-link">LinkedIn</a>
-      <span v-if="member.phone" class="phone-number">{{ member.phone }}</span>
+<!--       <a v-if="member.linkedin" :href="member.linkedin" class="linkedin-link">LinkedIn</a>
+ -->      <span v-if="member.phone" class="phone-number">{{ member.phone }}</span>
     </div>
   </div>
 </template>

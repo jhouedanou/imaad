@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// base '/imaad/' = GitHub Pages projet (jhouedanou.github.io/imaad/)
+// VITE_BASE=/ sur Vercel, /imaad/ sur GitHub Pages
 export default defineConfig({
-  base: '/imaad/',
+  base: process.env.VITE_BASE ?? '/imaad/',
   plugins: [vue()],
   css: {
     devSourcemap: true,

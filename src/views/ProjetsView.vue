@@ -8,11 +8,27 @@ import { useSeo } from '../composables/useSeo'
 
 const p = site.pages.projets
 useSeo(p.meta)
+
+// secteur -> filtres applicables (un projet peut relever de plusieurs filtres)
+const SECTOR_CATS = {
+  'infrastructure routière': ['infra', 'souverain', 'ppp'],
+  'hydraulique': ['infra', 'souverain', 'ppp'],
+  'santé': ['ppp'],
+  'agriculture': ['souverain', 'corporate'],
+  'immobilier': ['corporate'],
+  'logistique': ['corporate'],
+  'industrie': ['corporate'],
+  'mines': ['corporate'],
+  'énergie': ['energie']
+}
+const catsFor = (it) =>
+  it.cats || (it.cat ? [it.cat] : SECTOR_CATS[(it.sector || '').toLowerCase()] || ['corporate'])
+
 const activeCat = ref('tous')
 const filtered = computed(() =>
   activeCat.value === 'tous'
     ? p.items
-    : p.items.filter((it) => it.cat === activeCat.value)
+    : p.items.filter((it) => catsFor(it).includes(activeCat.value))
 )
 </script>
 
@@ -20,6 +36,8 @@ const filtered = computed(() =>
   <PageHero :label="p.hero.label" :title="p.hero.title" :desc="p.hero.desc" />
 
   <StatsBar :stats="p.stats" />
+
+
 
   <div class="filters-bar filters-bar--pills">
     <span class="filter-label">{{ p.filtersLabel }}</span>
@@ -32,8 +50,11 @@ const filtered = computed(() =>
       @click="activeCat = f.cat"
     >{{ f.label }}</button>
   </div>
-
-  <section class="section-projets-grid">
+  <div class="projets-section-header container-fluid">
+    <div class="section-label">{{ p.hero.label }}</div>
+    <h2>{{ p.hero.title }}</h2>
+  </div>
+  <section class="section-projets-grid container-fluid">
     <div class="grid-3" id="projects-grid">
       <ProjectCard
         v-for="(proj, i) in filtered"

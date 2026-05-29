@@ -28,23 +28,22 @@
       {
         "title": "Mieux nous connaître",
         "links": [
-          { "label": "Télécharger la brochure", "to": "#" },
-          { "label": "Actualités & Insights", "to": "#" },
-          { "label": "Carrières", "to": "#" }
+          { "label": "Télécharger la brochure", "to": "/en-construction?t=Télécharger la brochure" },
+          { "label": "Actualités & Insights", "to": "/en-construction?t=Actualités %26 Insights" },
+          { "label": "Carrières", "to": "/en-construction?t=Carrières" }
         ]
       }
     ],
     "contactsTitle": "Contacts",
     "bureauxTitle": "Bureaux",
     "bureaux": [
-      "🇷🇼 Kigali",
-      "🇨🇮 Abidjan",
-      "🇬🇳 Conakry",
-      "🇸🇳 Dakar",
-      "🇳🇬 Lagos",
-      "🇨🇲 Yaoundé",
-      "🇮🇳 Inde",
-      "🇬🇧 Londres"
+      { "city": "Kigali", "code": "rw" },
+      { "city": "Abidjan", "code": "ci" },
+      { "city": "Conakry", "code": "gn" },
+      { "city": "Dakar", "code": "sn" },
+      { "city": "Lagos", "code": "ng" },
+      { "city": "Yaoundé", "code": "cm" },
+      { "city": "Londres", "code": "gb" }
     ],
     "copyright": "© 2025 IMAAD Financial Group. Tous droits réservés.",
     "bottomLinks": [
@@ -169,7 +168,7 @@
             "text": "Structuration et closing du financement de l'axe routier stratégique reliant les villes d'Abidjan et de San Pédro."
           },
           {
-            "image": "assets/projet-3-immobilier.png",
+            "image": "assets/projet-2-sante.png",
             "alt": "Immobilier Guinée",
             "country": "🇬🇳 Guinée",
             "status": "Closé 2024",
@@ -179,11 +178,11 @@
             "text": "Structuration et closing du financement pour l'acquisition du siège social d'un grand groupe privé guinéen."
           },
           {
-            "image": "assets/projet-2-sante.png",
+            "image": "assets/projet-3-immobilier.png",
             "alt": "Santé Djibouti",
             "country": "🇩🇯 Djibouti",
-            "status": "T3 2025",
-            "statusClass": "badge-pipeline",
+            "status": "Closé 2026",
+            "statusClass": "badge-closed",
             "sector": "Santé",
             "amount": "25 M$",
             "text": "Construction de l'Hôpital Régional de Référence de Djibouti."
@@ -197,27 +196,33 @@
         "cta": { "label": "Toute l'équipe", "to": "/equipe" },
         "members": [
           {
-            "image": "assets/team-3.png",
+            "image": "assets/team-1.png",
             "name": "Pierre WOLF",
             "titleFr": "Président du Conseil de Gestion",
             "titleEn": "Management Council President",
-            "text": "Ancien banquier senior international, Pierre garantit la gouvernance du groupe.",
-            "linkedin": "#"
-          },
-          {
-            "image": "assets/team-1.png",
-            "name": "Issa Mehmet N'DIAYE",
-            "titleFr": "Co-Fondateur & Directeur Général",
-            "titleEn": "Co-Founder, Chairman & CEO",
-            "text": "Architecte de la stratégie d'ensemble du groupe, 20 ans en finance structurée.",
+            "text": "Ancien banquier senior international, Pierre garantit la gouvernance du groupe et préside le comité d'investissement avec rigueur et indépendance.",
+            "email": "pierre.wolf@imaadholding.com",
+            "emailAsLink": true,
             "linkedin": "#"
           },
           {
             "image": "assets/team-2.png",
+            "name": "Issa Mehmet N'DIAYE",
+            "titleFr": "Co-Fondateur & Directeur Général",
+            "titleEn": "Co-Founder, Chairman & CEO",
+            "text": "Architecte de la stratégie d'ensemble du groupe, Issa apporte une expertise de 20 ans en finance structurée et en marchés émergents africains.",
+            "email": "mehmet.ndiaye@imaadholding.com",
+            "emailAsLink": false,
+            "linkedin": "#"
+          },
+          {
+            "image": "assets/team-3.png",
             "name": "Rym MOULAYE-IDRISS",
             "titleFr": "Co-Fondatrice & Directrice Générale",
             "titleEn": "Co-Founder & Deputy CEO",
-            "text": "Spécialiste des financements multilatéraux et des PPP.",
+            "text": "Spécialiste des financements multilatéraux et des PPP, Rym pilote les relations institutionnelles et la structuration des transactions majeures.",
+            "email": "rym.moulayeidriss@imaadholding.com",
+            "emailAsLink": false,
             "linkedin": "#"
           },
           {
@@ -225,7 +230,9 @@
             "name": "Olutobi OSIBODU",
             "titleFr": "Directeur Exécutif",
             "titleEn": "Managing Director",
-            "text": "Ancien banquier senior international, pilote les transactions majeures.",
+            "text": "Ancien banquier senior international, Olutobi pilote l'exécution des transactions majeures et le développement du portefeuille corporate.",
+            "email": "olutobi.osibodu@imaadholding.com",
+            "emailAsLink": false,
             "linkedin": "#"
           }
         ]
@@ -234,7 +241,7 @@
         "label": "Travaillons ensemble",
         "title": "Nous contacter",
         "text": "Pour toute demande institutionnelle, partenariat stratégique ou soumission de projet, notre équipe vous répondra dans les 48 heures.",
-        "emailLabel": "E-Mail"
+        "emailLabel": "E-mail"
       }
     },
     "projets": {
@@ -260,22 +267,21 @@
         { "cat": "souverain", "label": "Financement Souverain" },
         { "cat": "ppp", "label": "PPP" },
         { "cat": "corporate", "label": "Corporate" },
-        { "cat": "energie", "label": "Énergie" },
         { "cat": "infra", "label": "Eaux & Infrastructures" }
       ],
       "items": [
-        { "cat": "infra", "image": "assets/projet-1-infrastructure.png", "alt": "Infrastructure routière", "country": "Côte d'Ivoire", "status": "Closé 2023", "statusClass": "", "sector": "Infrastructure Routière", "amount": "150 M€", "text": "Structuration et closing du financement de l'axe routier stratégique reliant les villes d'Abidjan et de San Pédro." },
-        { "cat": "corporate", "image": "assets/projet-3-immobilier.png", "alt": "Immobilier Guinée", "country": "Guinée", "status": "Closé 2026", "statusClass": "", "sector": "Immobilier", "amount": "10 M$", "text": "Structuration et closing du financement pour l'acquisition du siège social d'un grand groupe privé guinéen." },
-        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80", "alt": "Logistique Guinée", "country": "Guinée", "status": "T2 2026", "statusClass": "badge-pipeline", "sector": "Logistique", "amount": "5 M$", "text": "Projet d'acquisition de camions de transport de minerais." },
-        { "cat": "ppp", "image": "assets/projet-2-sante.png", "alt": "Santé Djibouti", "country": "Djibouti", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Santé", "amount": "25 M$", "text": "Construction de l'Hôpital Régional de Référence de Djibouti." },
-        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80", "alt": "Immobilier Guinée", "country": "Guinée", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Immobilier", "amount": "15 M$", "text": "Projet de construction de logements pour la Diaspora." },
-        { "cat": "ppp", "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80", "alt": "Santé Bénin", "country": "Bénin", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Santé", "amount": "25 M€", "text": "Projet de construction d'une unité de vaccins vétérinaires." },
-        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&q=80", "alt": "Industrie Bénin", "country": "Bénin", "status": "T4 2026", "statusClass": "badge-pipeline", "sector": "Industrie", "amount": "137 M€", "text": "Projet de construction d'une unité de production de câbles électriques." },
-        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80", "alt": "Mines Rwanda", "country": "Rwanda", "status": "T4 2026", "statusClass": "badge-pipeline", "sector": "Mines", "amount": "10 M$", "text": "Projet d'acquisition de matériel d'exploitation d'une mine de 3Ts." },
-        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80", "alt": "Immobilier Sénégal", "country": "Sénégal", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Immobilier", "amount": "25 M€", "text": "Construction d'une cité de logements économiques et de standing." },
-        { "cat": "souverain", "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&q=80", "alt": "Agriculture Sénégal", "country": "Sénégal", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Agriculture", "amount": "17 M€", "text": "Construction de silos à grains." },
-        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80", "alt": "Immobilier Cameroun", "country": "Cameroun", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Immobilier", "amount": "20 M€", "text": "Construction de logements." },
-        { "cat": "infra", "image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80", "alt": "Hydraulique CIV", "country": "Côte d'Ivoire", "status": "T4 2026", "statusClass": "badge-pipeline", "sector": "Hydraulique", "amount": "278 M€", "text": "Projet d'adduction en eau potable d'Abidjan Sud." }
+        { "image": "assets/projets/infrastructure-routiere.png", "alt": "Infrastructure routière", "country": "Côte d'Ivoire", "status": "Closé 2023", "statusClass": "badge-closed", "sector": "Infrastructure Routière", "amount": "150 M€", "text": "Structuration et closing du financement de l'axe routier stratégique reliant les villes d'Abidjan et de San Pédro." },
+        { "image": "assets/projets/immobilier-guinee.png", "alt": "Immobilier Guinée", "country": "Guinée", "status": "Closé 2026", "statusClass": "badge-closed", "sector": "Immobilier", "amount": "10 M$", "text": "Structuration et closing du financement pour l'acquisition du siège social d'un grand groupe privé guinéen." },
+        { "image": "assets/projets/logistique-minerais.png", "alt": "Logistique Guinée", "country": "Guinée", "status": "T2 2026", "statusClass": "badge-pipeline", "sector": "Logistique", "amount": "5 M$", "text": "Projet d'acquisition de camions de transport de minerais." },
+        { "image": "assets/projets/sante-djibouti.png", "alt": "Santé Djibouti", "country": "Djibouti", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Santé", "amount": "25 M$", "text": "Construction de l'Hôpital Régional de Référence de Djibouti." },
+        { "image": "assets/projets/immobilier-diaspora.png", "alt": "Immobilier Guinée", "country": "Guinée", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Immobilier", "amount": "15 M$", "text": "Projet de construction de logements pour la Diaspora." },
+        { "image": "assets/projets/sante-vaccins.png", "alt": "Santé Bénin", "country": "Bénin", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Santé", "amount": "25 M€", "text": "Projet de construction d'une unité de vaccins vétérinaires." },
+        { "image": "assets/projets/industrie-cables.png", "alt": "Industrie Bénin", "country": "Bénin", "status": "T4 2026", "statusClass": "badge-pipeline", "sector": "Industrie", "amount": "137 M€", "text": "Projet de construction d'une unité de production de câbles électriques." },
+        { "image": "assets/projets/mines.png", "alt": "Mines Rwanda", "country": "Rwanda", "status": "T4 2026", "statusClass": "badge-pipeline", "sector": "Mines", "amount": "10 M$", "text": "Projet d'acquisition de matériel d'exploitation d'une mine de 3Ts." },
+        { "image": "assets/projets/immobilier-cite.png", "alt": "Immobilier Sénégal", "country": "Sénégal", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Immobilier", "amount": "25 M€", "text": "Construction d'une cité de logements économiques et de standing." },
+        { "image": "assets/projets/agriculture-silos.png", "alt": "Agriculture Sénégal", "country": "Sénégal", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Agriculture", "amount": "17 M€", "text": "Construction de silos à grains." },
+        { "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80", "alt": "Immobilier Cameroun", "country": "Cameroun", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Immobilier", "amount": "20 M€", "text": "Construction de logements." },
+        { "image": "assets/projets/hydraulique-abidjan.png", "alt": "Hydraulique CIV", "country": "Côte d'Ivoire", "status": "T4 2026", "statusClass": "badge-pipeline", "sector": "Hydraulique", "amount": "278 M€", "text": "Projet d'adduction en eau potable d'Abidjan Sud." }
       ]
     },
     "equipe": {
@@ -294,27 +300,27 @@
           "spaced": false,
           "compact": false,
           "members": [
-            { "image": "assets/team-3.png", "name": "Pierre WOLF", "titleFr": "Président du Conseil de Gestion", "titleEn": "Management Council President", "text": "Ancien banquier senior international, Pierre garantit la gouvernance du groupe et préside le comité d'investissement avec rigueur et indépendance.", "email": "pierre.wolf@imaadholding.com", "emailAsLink": true },
-            { "image": "assets/team-1.png", "name": "Issa Mehmet N'DIAYE", "titleFr": "Co-fondateur & directeur général", "titleEn": "Co-Founder, Chairman & CEO", "text": "Architecte de la stratégie d'ensemble du groupe, Issa apporte une expertise de 20 ans en finance structurée et en marchés émergents africains.", "email": "mehmet.ndiaye@imaadholding.com", "emailAsLink": false },
-            { "image": "assets/team-2.png", "name": "Rym MOULAYE-IDRISS", "titleFr": "Co-fondatrice & Directrice Générale", "titleEn": "Co-Founder & Deputy CEO", "text": "Spécialiste des financements multilatéraux et des PPP, Rym pilote les relations institutionnelles et la structuration des transactions majeures.", "email": "rym.moulayeidriss@imaadholding.com", "emailAsLink": false },
-            { "image": "assets/team-4.png", "name": "Olutobi OSIBODU", "titleFr": "Directeur Exécutif", "titleEn": "Managing Director", "text": "Ancien banquier senior international, Olutobi pilote l'exécution des transactions majeures et le développement du portefeuille corporate.", "email": "olutobi.osibodu@imaadholding.com", "emailAsLink": false }
+            { "image": "assets/equipe/pierre-wolf.png", "name": "Pierre WOLF", "titleFr": "Président du Conseil de Gestion", "titleEn": "Management Council President", "text": "Ancien banquier senior international, Pierre garantit la gouvernance du groupe et préside le comité d'investissement avec rigueur et indépendance.", "email": "pierre.wolf@imaadholding.com", "emailAsLink": true },
+            { "image": "assets/equipe/issa-mehmet-ndiaye.png", "name": "Issa Mehmet N'DIAYE", "titleFr": "Co-fondateur & directeur général", "titleEn": "Co-Founder, Chairman & CEO", "text": "Architecte de la stratégie d'ensemble du groupe, Issa apporte une expertise de 20 ans en finance structurée et en marchés émergents africains.", "email": "mehmet.ndiaye@imaadholding.com", "emailAsLink": false },
+            { "image": "assets/equipe/rym-moulaye-idriss.png", "name": "Rym MOULAYE-IDRISS", "titleFr": "Co-fondatrice & Directrice Générale", "titleEn": "Co-Founder & Deputy CEO", "text": "Spécialiste des financements multilatéraux et des PPP, Rym pilote les relations institutionnelles et la structuration des transactions majeures.", "email": "rym.moulayeidriss@imaadholding.com", "emailAsLink": false },
+            { "image": "assets/equipe/olutobi-osibodu.png", "name": "Olutobi OSIBODU", "titleFr": "Directeur Exécutif", "titleEn": "Managing Director", "text": "Ancien banquier senior international, Olutobi pilote l'exécution des transactions majeures et le développement du portefeuille corporate.", "email": "olutobi.osibodu@imaadholding.com", "emailAsLink": false }
           ]
         },
         {
           "spaced": true,
           "compact": true,
           "members": [
-            { "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80", "name": "Pape Baye Diop", "titleFr": "Directeur des Opérations", "titleEn": "Chief Operating Officer", "email": "pape.diop@imaadholding.com", "emailAsLink": false },
-            { "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80", "name": "Henri TCHAKOUTE", "titleFr": "Responsable Business Development / Cameroun", "titleEn": "Business Development Manager / Cameroon", "email": "henri.tchakoute@imaadholding.com", "emailAsLink": false },
-            { "image": "https://images.unsplash.com/photo-1598550880863-4e8aa3d0edb4?w=400&q=80", "name": "Safietou CAMARA", "titleFr": "Analyste Financier Senior", "titleEn": "Senior Financial Analyst", "email": "safietou.camara@imaadholding.com", "emailAsLink": false },
-            { "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80", "name": "Korotoum KONÉ", "titleFr": "Analyste Financier Junior", "titleEn": "Junior Financial Analyst", "email": "korotoum.kone@imaadholding.com", "emailAsLink": false }
+            { "image": "assets/equipe/pape-baye-diop.png", "name": "Pape Baye Diop", "titleFr": "Directeur des Opérations", "titleEn": "Chief Operating Officer", "email": "pape.diop@imaadholding.com", "emailAsLink": false },
+            { "image": "assets/equipe/henri-tchakoute.png", "name": "Henri TCHAKOUTE", "titleFr": "Responsable Business Development / Cameroun", "titleEn": "Business Development Manager / Cameroon", "email": "henri.tchakoute@imaadholding.com", "emailAsLink": false },
+            { "image": "assets/equipe/safietou-camara.png", "name": "Safietou CAMARA", "titleFr": "Analyste Financier Senior", "titleEn": "Senior Financial Analyst", "email": "safietou.camara@imaadholding.com", "emailAsLink": false },
+            { "image": "assets/equipe/korotoum-kone.png", "name": "Korotoum KONÉ", "titleFr": "Analyste Financier Junior", "titleEn": "Junior Financial Analyst", "email": "korotoum.kone@imaadholding.com", "emailAsLink": false }
           ]
         },
         {
           "spaced": true,
           "compact": true,
           "members": [
-            { "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80", "name": "Maylis Agbahan", "titleFr": "Officer Manager / Abidjan", "titleEn": "", "email": "maylis.agbahan@imaadholding.com", "emailAsLink": false, "phone": "+225 07 59 62 59 72" }
+            { "image": "assets/equipe/maylis-agbahan.png", "name": "Maylis Agbahan", "titleFr": "Officer Manager / Abidjan", "titleEn": "", "email": "maylis.agbahan@imaadholding.com", "emailAsLink": false, "phone": "+225 07 59 62 59 72" }
           ]
         }
       ]

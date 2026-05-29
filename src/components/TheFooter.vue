@@ -30,7 +30,10 @@ const isInternal = (to) => to && to !== '#' && !/^https?:\/\//.test(to)
         <div class="footer-bureaux">
           <h5>{{ f.bureauxTitle }}</h5>
           <div class="bureaux-flags">
-            <span v-for="b in f.bureaux" :key="b">{{ b }}</span>
+            <span v-for="b in f.bureaux" :key="b.city">
+              <img class="bureau-flag" :src="`https://flagcdn.com/${b.code}.svg`" :alt="b.city" width="18" height="12">
+              {{ b.city }}
+            </span>
           </div>
         </div>
       </div>
