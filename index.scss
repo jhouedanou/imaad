@@ -1,0 +1,367 @@
+// ===========================================================================
+// index.scss — styles spécifiques à la page d'accueil / À propos
+// Compilé vers index.css :  npx sass index.scss index.css
+// ===========================================================================
+
+// ── HERO SECTION ──
+.hero {
+  background: var(--navy);
+  padding: 70px 60px 60px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 60px;
+  align-items: start;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+}
+
+.hero {
+  h1 {
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.12;
+    margin-bottom: 24px;
+
+    span { color: var(--gold); }
+  }
+}
+
+.hero-desc {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+// Mini stats sous le CTA (ex-inline)
+.hero-mini-stats {
+  display: flex;
+  gap: 48px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-mini-stat-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.hero-mini-stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 3px;
+}
+
+// Stats sidebar
+.hero-stats-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(184, 150, 46, 0.3);
+  padding: 28px 24px;
+
+  .contact-rapide {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .stat-row {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    &:last-child { border-bottom: none; }
+  }
+
+  .stat-big {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .stat-sub {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 3px;
+  }
+
+  .btn-gold {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 14px;
+  }
+}
+
+// Lignes de texte de la carte contact (ex-inline)
+.stat-row-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.stat-row-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+// ── VALEURS ──
+.section-valeurs {
+  padding: 80px 60px;
+  background: var(--white);
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+}
+
+// ── EXPERTISE ──
+.section-expertise {
+  background: var(--navy);
+  padding: 80px 60px;
+}
+
+.expertise-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.expertise-left {
+  h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 24px;
+    line-height: 1.25;
+  }
+
+  p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+}
+
+.expertise-right {
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .domains-subtitle {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+}
+
+// Grille des domaines (ex-inline)
+.domains-grid {
+  display: grid;
+  gap: 16px;
+}
+
+// ── PROJETS PREVIEW ──
+.section-projets {
+  padding: 80px 60px;
+  background: var(--cream);
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 800;
+  }
+}
+
+.voir-tous {
+  text-align: center;
+  margin-top: 40px;
+}
+
+// Badge pipeline (ex-inline)
+.badge-pipeline {
+  background: #3b82f6;
+}
+
+// ── TEAM PREVIEW ──
+.section-team-preview {
+  padding: 80px 60px;
+  background: var(--white);
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 48px;
+  }
+}
+
+// Bouton espacé (ex-inline margin-top)
+.btn-spaced {
+  margin-top: 20px;
+}
+
+// ── CONTACT PREVIEW ──
+.section-contact-preview {
+  padding: 80px 60px;
+  background: var(--cream);
+}
+
+.contact-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-preview-left {
+  h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+}
+
+.contact-email-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  .email-icon {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+
+  .email-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  a {
+    font-size: 14px;
+    color: var(--text-dark);
+  }
+}
+
+.contact-form-card {
+  background: var(--white);
+  padding: 36px 32px;
+  border: 1px solid var(--border);
+
+  h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 28px;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+// Texte zone d'upload (ex-inline)
+.file-upload-text {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+// Bouton pleine largeur du formulaire (ex-inline)
+.btn-block {
+  width: 100%;
+  justify-content: center;
+  padding: 14px;
+  font-size: 13px;
+}

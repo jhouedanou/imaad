@@ -35,6 +35,14 @@ const IMAAD_NAV = (activePage) => `
 </nav>
 `;
 
+// Hero title component from Zeplin: "Catalyseur de la souveraineté et de la croissance durable"
+const IMAAD_SOVEREIGNETE_HEADLINE = () => `
+<h1 class="sov-growth-heading" aria-label="Catalyseur de la souveraineté et de la croissance durable">
+  <span class="line">Catalyseur de la <span class="highlight">souveraineté</span></span>
+  <span class="line">et de la croissance durable</span>
+</h1>
+`;
+
 const IMAAD_FOOTER = () => `
 <footer>
   <div class="footer-grid">
