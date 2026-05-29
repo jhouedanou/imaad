@@ -18,6 +18,11 @@ const status = ref(null) // 'success' | 'error' | null
 async function handleSubmit(e) {
   const form = e.target
   const formData = new FormData(form)
+
+  // retire les inputs fichier vides (sinon Web3Forms répond 400)
+  for (const [key, value] of [...formData.entries()]) {
+    if (value instanceof File && value.size === 0) formData.delete(key)
+  }
   formData.append('access_key', WEB3FORMS_KEY)
 
   sending.value = true

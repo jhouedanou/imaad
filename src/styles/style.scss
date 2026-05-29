@@ -1396,7 +1396,7 @@ h1, h2, h3, h4, h5, h6 {
   .page-hero-title { font-size: 32px !important; }
 }
 .page-home{
-   background: url("/imaad/assets/bgHome.svg") no-repeat 47vw 4vh /53vw, linear-gradient(129deg, #0e1b2e 36%, #374862 138%);
+   background: var(--bg-home) no-repeat 47vw 4vh /53vw, linear-gradient(129deg, #0e1b2e 36%, #374862 138%);
 background-attachment: fixed;
 
   .navbar{
@@ -1413,7 +1413,7 @@ background-attachment: fixed;
 
 .page-projets{
   .page-hero{
-    background:url("/imaad/assets/bgProjets.jpg");
+    background: var(--bg-projets);
     background-size:cover;
   }
 }
@@ -1421,7 +1421,7 @@ background-attachment: fixed;
   background-color: #f8f6f2;
 
   .page-hero{
-    background:url("/imaad/assets/bgEquipe.jpg");
+    background: var(--bg-equipe);
     background-size:cover;
      .section-label{
     text-align:left !important;
