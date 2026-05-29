@@ -1043,6 +1043,46 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
+/* Responsive stats-bar--zeplin */
+@media (max-width: 991px) {
+  .stats-bar--zeplin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .stats-bar--zeplin .stat-item {
+    flex: none;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .stats-bar--zeplin .stat-value {
+    font-size: 24px;
+  }
+
+  .stats-bar--zeplin .stat-label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-bar--zeplin {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .stats-bar--zeplin .stat-value {
+    font-size: 20px;
+  }
+
+  .stats-bar--zeplin .stat-label {
+    font-size: 12px;
+  }
+}
+
 .filters-bar--pills {
   background: var(--cream);
   padding: 24px 60px;
