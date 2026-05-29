@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jhouedanou.github.io/imaad/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jhouedanou.github.io/imaad/projets.html</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://jhouedanou.github.io/imaad/projets</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhouedanou.github.io/imaad/equipe.html</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://jhouedanou.github.io/imaad/equipe</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhouedanou.github.io/imaad/contact.html</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://jhouedanou.github.io/imaad/contact</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

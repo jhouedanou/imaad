@@ -3,9 +3,52 @@
 // Compilé vers index.css :  npx sass index.scss index.css --no-source-map
 // ===========================================================================
 
+// ── POLICE OPENSANS ──
+// Alias "OpenSans" (sans espace) -> Open Sans.
+// local() : utilise la police installée / déjà chargée. Sinon fallback gstatic.
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+       url('https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4n.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans'), local('OpenSans-Regular'),
+       url('https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+       url('https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4n.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+       url('https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
+       url('https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4n.ttf') format('truetype');
+}
+
 // ── HERO SECTION ──
 .hero {
-  background: var(--navy);
   padding: 70px 60px 60px;
   display: grid;
   grid-template-columns: 1fr 320px;
@@ -37,7 +80,7 @@
   margin-bottom: 20px;
   font-family: var(--font-heading);
 
-  &::before {
+  &::after,&::before {
     content: '';
     display: block;
     width: 35px;
@@ -47,11 +90,17 @@
 }
 
 .hero-desc {
+   font-family: OpenSans;
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 1.7;
-  max-width: 520px;
-  margin-bottom: 36px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: -0.15px;
+  text-align: left;
+  color: #fff;
+  max-width: 464px;
+  margin-bottom: 30px;
 }
 
 .hero-actions {
@@ -65,7 +114,18 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(184, 150, 46, 0.3);
   padding: 28px 24px;
+  .form-control{
+    background: transparent;
+      border: solid 1px #4c5669b0;
+      color:#c1a258;
+      &:focus {
+        background: transparent;
+        border: solid 1px #c1a258;
+        box-shadow: none;
+      }
+    
 
+  }
   .contact-rapide {
     font-size: 11px;
     font-weight: 700;
@@ -109,24 +169,43 @@
 .section-valeurs {
   padding: 80px 60px;
   background: var(--white);
-
+.grid-3{
+    max-width:996px;
+margin:0 auto;
+  gap:0 !important;
+}
   .section-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 60px;
+     max-width:996px;
+margin-left:auto;
+    margin-right:auto;
   }
 
   h2 {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 16px;
+   font-family: Montserrat;
+  font-size: 33px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: -0.33px;
+  text-align: left;
+  color: #0e1b2e;
+  padding-bottom: 15px;
   }
 
   .subtitle {
-    font-size: 14px;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.7;
+    font-family: OpenSans;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: -0.13px;
+  text-align: left;
+  color: #686868;
+  max-width: 650px;
   }
 }
 
@@ -157,7 +236,15 @@
   max-width: 900px;
   margin: 0 auto 80px;
   text-align: center;
+.section-label{
+  padding-bottom:50px;
+        color: #c1a258 !important;
+  }
 
+  h2 {
+    font-size: 33px;
+    font-weight: 700
+}
   h2 {
     font-size: 33px;
     font-weight: 700;
@@ -178,7 +265,21 @@
     margin-right: auto;
   }
 }
-
+#blacknoir{
+  p{
+      font-family: OpenSans;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: -0.13px;
+  text-align: left;
+  color: #fff;
+    max-width:400px;
+    margin-bottom:25px;
+  }
+}
 .expertise-header {
   position: relative;
   max-width: 1200px;
@@ -188,6 +289,8 @@
 
   .section-label {
     margin-bottom: 8px;
+      color: #c1a258 !important;
+
   }
 }
 
@@ -219,7 +322,7 @@
 // ── PROJETS PREVIEW ──
 .section-projets {
   padding: 80px 60px;
-  background: var(--cream);
+  background: white;
 
   .section-header {
     text-align: center;
@@ -340,4 +443,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+}
+.hero-left {
+  .btn-gold {
+  border-radius: 6px !important;
+  background-color: #c1a258 !important;
+  font-family: Montserrat !important;
+  font-size: 12px !important;
+    color: #0e1b2e !important;
+
+  }
+   .btn-outline-white{
+  border-radius: 6px !important;
+  font-family: Montserrat !important;
+  font-size: 12px !important;
+
+
+  }
 }

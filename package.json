@@ -1,0 +1,24 @@
+{
+  "name": "imaad",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite-ssg build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@unhead/vue": "^3.1.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "jsdom": "^29.1.1",
+    "sass": "^1.83.0",
+    "vite": "^6.0.7",
+    "vite-ssg": "^28.3.0"
+  }
+}

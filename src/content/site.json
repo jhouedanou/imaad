@@ -1,0 +1,346 @@
+{
+  "brand": "IMAAD Financial Group",
+  "tagline": "Catalyseur de la souveraineté et de la croissance durable.",
+  "email": "infos@imaadholding.com",
+  "ogImage": "https://jhouedanou.github.io/imaad/og-image.jpg",
+  "baseUrl": "https://jhouedanou.github.io/imaad/",
+  "nav": [
+    { "label": "À propos", "to": "/" },
+    { "label": "Projets", "to": "/projets" },
+    { "label": "Équipe", "to": "/equipe" },
+    { "label": "Contact", "to": "/contact" }
+  ],
+  "navCta": { "label": "Nous contacter", "to": "/contact" },
+  "footer": {
+    "brandName": "IMAAD FINANCIAL GROUP",
+    "tagline": "Catalyseur de la souveraineté et de la croissance durable.",
+    "cols": [
+      {
+        "title": "Qui sommes-nous ?",
+        "links": [
+          { "label": "À propos", "to": "/" },
+          { "label": "Domaines d'excellence", "to": "/#domaines" },
+          { "label": "Projets & Impact", "to": "/projets" },
+          { "label": "Équipe & Gouvernance", "to": "/equipe" },
+          { "label": "Contact", "to": "/contact" }
+        ]
+      },
+      {
+        "title": "Mieux nous connaître",
+        "links": [
+          { "label": "Télécharger la brochure", "to": "#" },
+          { "label": "Actualités & Insights", "to": "#" },
+          { "label": "Carrières", "to": "#" }
+        ]
+      }
+    ],
+    "contactsTitle": "Contacts",
+    "bureauxTitle": "Bureaux",
+    "bureaux": [
+      "🇷🇼 Kigali",
+      "🇨🇮 Abidjan",
+      "🇬🇳 Conakry",
+      "🇸🇳 Dakar",
+      "🇳🇬 Lagos",
+      "🇨🇲 Yaoundé",
+      "🇮🇳 Inde",
+      "🇬🇧 Londres"
+    ],
+    "copyright": "© 2025 IMAAD Financial Group. Tous droits réservés.",
+    "bottomLinks": [
+      { "label": "Mentions légales", "to": "#" },
+      { "label": "Politique de confidentialité", "to": "#" }
+    ]
+  },
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "IMAAD Financial Group — Banque d'affaires panafricaine",
+        "description": "IMAAD Financial Group est une banque d'affaires panafricaine spécialisée dans le financement souverain, les PPP et le Corporate Finance en Afrique, au Moyen-Orient et en Amérique Latine.",
+        "path": ""
+      },
+      "hero": {
+        "eyebrow": "Banque d'affaires panafricaine",
+        "title": "Catalyseur de la <span>souveraineté</span><br>et de la croissance durable",
+        "desc": "Imaad Financial Group structure et finance des projets souverains, PPP et corporate en Afrique, au Moyen-Orient et en Amérique Latine.",
+        "actions": [
+          { "label": "Découvrir nos solutions", "to": "/#valeurs", "class": "btn btn-gold" },
+          { "label": "Voir nos réalisations", "to": "/projets", "class": "btn btn-outline-white" }
+        ],
+        "stats": [
+          { "value": "+1.000.000.000 €", "label": "Mobilisé depuis 2020" },
+          { "value": "+3", "label": "Projets PPP structurés" },
+          { "value": "15+", "label": "Pays couverts" },
+          { "value": "6", "label": "Bureaux Régionaux" }
+        ],
+        "card": {
+          "title": "Contact rapide",
+          "rows": [
+            { "label": "Demande institutionnelle", "text": "Pour tout projet souverain ou financement structuré" },
+            { "label": "Partenariat PPP", "text": "Développement, structuration et closing" }
+          ],
+          "cta": { "label": "Contacter nos experts →", "to": "/contact" }
+        }
+      },
+      "ticker": "News bande déroulante",
+      "valeurs": {
+        "label": "NOTRE MODÈLE",
+        "title": "Une banque d'affaires au Service<br>du développement durable",
+        "subtitle": "Imaad Financial Group place la finance au service du développement, de la compétitivité et de la durabilité. Nous combinons vision internationale et exécution locale.",
+        "cards": [
+          {
+            "icon": "assets/icon-souverainete.svg",
+            "title": "Souveraineté",
+            "text": "Renforcer l'autonomie financière des États et des institutions publiques à travers des solutions de financement innovantes et responsables."
+          },
+          {
+            "icon": "assets/icon-impact.svg",
+            "title": "Impact",
+            "text": "Des projets durables créateurs d'emplois et de valeur sociale, alignés sur les ODD et les objectifs de développement régional."
+          },
+          {
+            "icon": "assets/icon-excellence.svg",
+            "title": "Excellence",
+            "text": "Une exécution de haute précision portée par des équipes pluridisciplinaires et une expertise financière internationale."
+          }
+        ]
+      },
+      "expertise": {
+        "identityTitle": "Une banque d'affaires panafricaine<br>à vocation internationale",
+        "identityParagraphs": [
+          "Depuis 2021, Imaad Financial Group accompagne États, institutions et entreprises dans la structuration et le financement de leurs projets les plus stratégiques sur les marchés émergents.",
+          "Nous conjuguons rigueur des standards internationaux, connaissance fine des marchés africains et accès direct à un réseau d'investisseurs et de partenaires institutionnels de premier plan."
+        ],
+        "label": "Notre expertise",
+        "title": "Domaines d'Excellence",
+        "subtitle": "Des solutions de financement sur-mesure pour États, entreprises et investisseurs,<br>articulées autour de trois axes stratégiques complémentaires.",
+        "domains": [
+          {
+            "num": "01",
+            "title": "Financement Souverain",
+            "active": true,
+            "desc": "Mobilisation de financements concessionnels, restructuration et optimisation de la dette publique, et appuis budgétaires pour États et institutions publiques.",
+            "items": [
+              "Restructuration de dette publique",
+              "Accès aux marchés de capitaux internationaux",
+              "Mobilisation de financements multilatéraux",
+              "Appuis budgétaires et garanties souveraines"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Partenariats Public-Privé (PPP)",
+            "active": false,
+            "desc": "Conseil, structuration et développement d'infrastructures en partenariat étatique et privé. Routes, hôpitaux, énergie, eau : nous accompagnons chaque étape du cycle projet.",
+            "items": [
+              "Montage juridique et financier des PPP",
+              "Identification et sélection des partenaires",
+              "Structuration des concessions et BOT",
+              "Accompagnement du closing financier"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Corporate & Trade Finance",
+            "active": false,
+            "desc": "Financement CAPEX & OPEX pour entreprises des secteurs industrie, logistique et immobilier. Solutions structurées adaptées aux marchés émergents.",
+            "items": [
+              "Financement de projets industriels",
+              "Solutions de trade finance structuré",
+              "Accompagnement M&A et acquisitions",
+              "Levée de fonds equity et mezzanine"
+            ]
+          }
+        ]
+      },
+      "projetsPreview": {
+        "label": "Réalisations",
+        "title": "Projets & Impact",
+        "cta": { "label": "Voir tous les projets", "to": "/projets" },
+        "cards": [
+          {
+            "image": "assets/projet-1-infrastructure.png",
+            "alt": "Infrastructure routière",
+            "country": "🇨🇮 Côte d'Ivoire",
+            "status": "Closé 2023",
+            "statusClass": "badge-closed",
+            "sector": "Infrastructure Routière",
+            "amount": "150 M€",
+            "text": "Structuration et closing du financement de l'axe routier stratégique reliant les villes d'Abidjan et de San Pédro."
+          },
+          {
+            "image": "assets/projet-3-immobilier.png",
+            "alt": "Immobilier Guinée",
+            "country": "🇬🇳 Guinée",
+            "status": "Closé 2024",
+            "statusClass": "badge-closed",
+            "sector": "Immobilier",
+            "amount": "10 M$",
+            "text": "Structuration et closing du financement pour l'acquisition du siège social d'un grand groupe privé guinéen."
+          },
+          {
+            "image": "assets/projet-2-sante.png",
+            "alt": "Santé Djibouti",
+            "country": "🇩🇯 Djibouti",
+            "status": "T3 2025",
+            "statusClass": "badge-pipeline",
+            "sector": "Santé",
+            "amount": "25 M$",
+            "text": "Construction de l'Hôpital Régional de Référence de Djibouti."
+          }
+        ]
+      },
+      "teamPreview": {
+        "label": "Leadership",
+        "title": "Équipe & Gouvernance",
+        "subtitle": "Leadership, intégrité et influence intercontinentale — une équipe dirigeante forgée par l'expérience internationale.",
+        "cta": { "label": "Toute l'équipe", "to": "/equipe" },
+        "members": [
+          {
+            "image": "assets/team-3.png",
+            "name": "Pierre WOLF",
+            "titleFr": "Président du Conseil de Gestion",
+            "titleEn": "Management Council President",
+            "text": "Ancien banquier senior international, Pierre garantit la gouvernance du groupe.",
+            "linkedin": "#"
+          },
+          {
+            "image": "assets/team-1.png",
+            "name": "Issa Mehmet N'DIAYE",
+            "titleFr": "Co-Fondateur & Directeur Général",
+            "titleEn": "Co-Founder, Chairman & CEO",
+            "text": "Architecte de la stratégie d'ensemble du groupe, 20 ans en finance structurée.",
+            "linkedin": "#"
+          },
+          {
+            "image": "assets/team-2.png",
+            "name": "Rym MOULAYE-IDRISS",
+            "titleFr": "Co-Fondatrice & Directrice Générale",
+            "titleEn": "Co-Founder & Deputy CEO",
+            "text": "Spécialiste des financements multilatéraux et des PPP.",
+            "linkedin": "#"
+          },
+          {
+            "image": "assets/team-4.png",
+            "name": "Olutobi OSIBODU",
+            "titleFr": "Directeur Exécutif",
+            "titleEn": "Managing Director",
+            "text": "Ancien banquier senior international, pilote les transactions majeures.",
+            "linkedin": "#"
+          }
+        ]
+      },
+      "contactPreview": {
+        "label": "Travaillons ensemble",
+        "title": "Nous contacter",
+        "text": "Pour toute demande institutionnelle, partenariat stratégique ou soumission de projet, notre équipe vous répondra dans les 48 heures.",
+        "emailLabel": "E-Mail"
+      }
+    },
+    "projets": {
+      "meta": {
+        "title": "Projets & Impact — IMAAD Financial Group",
+        "description": "Découvrez le portefeuille de projets d'IMAAD Financial Group : infrastructures routières, santé, énergie, immobilier et agriculture en Afrique. Plus d'1 milliard € mobilisés dans 15+ pays.",
+        "path": "projets"
+      },
+      "hero": {
+        "label": "Réalisations",
+        "title": "Projets & Impact",
+        "desc": "Des résultats mesurables dans des secteurs critiques — un portefeuille de transactions qui traduit notre engagement pour le développement durable de l'Afrique."
+      },
+      "stats": [
+        { "value": "+1.000.000.000 €", "label": "Mobilisé depuis 2020" },
+        { "value": "+3", "label": "Projets PPP structurés" },
+        { "value": "15+", "label": "Pays couverts" },
+        { "value": "6", "label": "Bureaux internationaux" }
+      ],
+      "filtersLabel": "Filtrer par :",
+      "filters": [
+        { "cat": "tous", "label": "Tous" },
+        { "cat": "souverain", "label": "Financement Souverain" },
+        { "cat": "ppp", "label": "PPP" },
+        { "cat": "corporate", "label": "Corporate" },
+        { "cat": "energie", "label": "Énergie" },
+        { "cat": "infra", "label": "Eaux & Infrastructures" }
+      ],
+      "items": [
+        { "cat": "infra", "image": "assets/projet-1-infrastructure.png", "alt": "Infrastructure routière", "country": "Côte d'Ivoire", "status": "Closé 2023", "statusClass": "", "sector": "Infrastructure Routière", "amount": "150 M€", "text": "Structuration et closing du financement de l'axe routier stratégique reliant les villes d'Abidjan et de San Pédro." },
+        { "cat": "corporate", "image": "assets/projet-3-immobilier.png", "alt": "Immobilier Guinée", "country": "Guinée", "status": "Closé 2026", "statusClass": "", "sector": "Immobilier", "amount": "10 M$", "text": "Structuration et closing du financement pour l'acquisition du siège social d'un grand groupe privé guinéen." },
+        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80", "alt": "Logistique Guinée", "country": "Guinée", "status": "T2 2026", "statusClass": "badge-pipeline", "sector": "Logistique", "amount": "5 M$", "text": "Projet d'acquisition de camions de transport de minerais." },
+        { "cat": "ppp", "image": "assets/projet-2-sante.png", "alt": "Santé Djibouti", "country": "Djibouti", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Santé", "amount": "25 M$", "text": "Construction de l'Hôpital Régional de Référence de Djibouti." },
+        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80", "alt": "Immobilier Guinée", "country": "Guinée", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Immobilier", "amount": "15 M$", "text": "Projet de construction de logements pour la Diaspora." },
+        { "cat": "ppp", "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80", "alt": "Santé Bénin", "country": "Bénin", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Santé", "amount": "25 M€", "text": "Projet de construction d'une unité de vaccins vétérinaires." },
+        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&q=80", "alt": "Industrie Bénin", "country": "Bénin", "status": "T4 2026", "statusClass": "badge-pipeline", "sector": "Industrie", "amount": "137 M€", "text": "Projet de construction d'une unité de production de câbles électriques." },
+        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80", "alt": "Mines Rwanda", "country": "Rwanda", "status": "T4 2026", "statusClass": "badge-pipeline", "sector": "Mines", "amount": "10 M$", "text": "Projet d'acquisition de matériel d'exploitation d'une mine de 3Ts." },
+        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80", "alt": "Immobilier Sénégal", "country": "Sénégal", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Immobilier", "amount": "25 M€", "text": "Construction d'une cité de logements économiques et de standing." },
+        { "cat": "souverain", "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&q=80", "alt": "Agriculture Sénégal", "country": "Sénégal", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Agriculture", "amount": "17 M€", "text": "Construction de silos à grains." },
+        { "cat": "corporate", "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80", "alt": "Immobilier Cameroun", "country": "Cameroun", "status": "T3 2026", "statusClass": "badge-pipeline", "sector": "Immobilier", "amount": "20 M€", "text": "Construction de logements." },
+        { "cat": "infra", "image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80", "alt": "Hydraulique CIV", "country": "Côte d'Ivoire", "status": "T4 2026", "statusClass": "badge-pipeline", "sector": "Hydraulique", "amount": "278 M€", "text": "Projet d'adduction en eau potable d'Abidjan Sud." }
+      ]
+    },
+    "equipe": {
+      "meta": {
+        "title": "Équipe & Gouvernance — IMAAD Financial Group",
+        "description": "Rencontrez l'équipe dirigeante d'IMAAD Financial Group : experts en finance internationale, financement structuré et marchés émergents africains. Leadership intercontinental.",
+        "path": "equipe"
+      },
+      "hero": {
+        "label": "Leadership",
+        "title": "Équipe & Gouvernance",
+        "desc": "Leadership, intégrité et influence intercontinentale — une équipe dirigeante forgée par l'expérience internationale."
+      },
+      "rows": [
+        {
+          "spaced": false,
+          "compact": false,
+          "members": [
+            { "image": "assets/team-3.png", "name": "Pierre WOLF", "titleFr": "Président du Conseil de Gestion", "titleEn": "Management Council President", "text": "Ancien banquier senior international, Pierre garantit la gouvernance du groupe et préside le comité d'investissement avec rigueur et indépendance.", "email": "pierre.wolf@imaadholding.com", "emailAsLink": true },
+            { "image": "assets/team-1.png", "name": "Issa Mehmet N'DIAYE", "titleFr": "Co-fondateur & directeur général", "titleEn": "Co-Founder, Chairman & CEO", "text": "Architecte de la stratégie d'ensemble du groupe, Issa apporte une expertise de 20 ans en finance structurée et en marchés émergents africains.", "email": "mehmet.ndiaye@imaadholding.com", "emailAsLink": false },
+            { "image": "assets/team-2.png", "name": "Rym MOULAYE-IDRISS", "titleFr": "Co-fondatrice & Directrice Générale", "titleEn": "Co-Founder & Deputy CEO", "text": "Spécialiste des financements multilatéraux et des PPP, Rym pilote les relations institutionnelles et la structuration des transactions majeures.", "email": "rym.moulayeidriss@imaadholding.com", "emailAsLink": false },
+            { "image": "assets/team-4.png", "name": "Olutobi OSIBODU", "titleFr": "Directeur Exécutif", "titleEn": "Managing Director", "text": "Ancien banquier senior international, Olutobi pilote l'exécution des transactions majeures et le développement du portefeuille corporate.", "email": "olutobi.osibodu@imaadholding.com", "emailAsLink": false }
+          ]
+        },
+        {
+          "spaced": true,
+          "compact": true,
+          "members": [
+            { "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80", "name": "Pape Baye Diop", "titleFr": "Directeur des Opérations", "titleEn": "Chief Operating Officer", "email": "pape.diop@imaadholding.com", "emailAsLink": false },
+            { "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80", "name": "Henri TCHAKOUTE", "titleFr": "Responsable Business Development / Cameroun", "titleEn": "Business Development Manager / Cameroon", "email": "henri.tchakoute@imaadholding.com", "emailAsLink": false },
+            { "image": "https://images.unsplash.com/photo-1598550880863-4e8aa3d0edb4?w=400&q=80", "name": "Safietou CAMARA", "titleFr": "Analyste Financier Senior", "titleEn": "Senior Financial Analyst", "email": "safietou.camara@imaadholding.com", "emailAsLink": false },
+            { "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80", "name": "Korotoum KONÉ", "titleFr": "Analyste Financier Junior", "titleEn": "Junior Financial Analyst", "email": "korotoum.kone@imaadholding.com", "emailAsLink": false }
+          ]
+        },
+        {
+          "spaced": true,
+          "compact": true,
+          "members": [
+            { "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80", "name": "Maylis Agbahan", "titleFr": "Officer Manager / Abidjan", "titleEn": "", "email": "maylis.agbahan@imaadholding.com", "emailAsLink": false, "phone": "+225 07 59 62 59 72" }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "meta": {
+        "title": "Contact — IMAAD Financial Group",
+        "description": "Contactez IMAAD Financial Group pour vos demandes institutionnelles, partenariats stratégiques ou soumissions de projets. Réponse garantie sous 48h. Email : infos@imaadholding.com",
+        "path": "contact"
+      },
+      "label": "Travaillons ensemble",
+      "title": "Nous contacter",
+      "lead": "Pour toute demande institutionnelle, partenariat stratégique ou soumission de projet, notre équipe vous répondra dans les 48 heures.",
+      "infoLabel": "E-mail",
+      "form": {
+        "title": "Envoyer une demande",
+        "fields": {
+          "name": { "label": "Nom complet", "placeholder": "Prénoms et nom de famile", "required": true },
+          "email": { "label": "Email", "placeholder": "Email", "required": true },
+          "org": { "label": "Organisation", "placeholder": "Votre organisation" },
+          "objet": { "label": "Objet de la demande", "options": ["Sélectionner", "Financement souverain", "Partenariat PPP", "Corporate & Trade", "Autre"] },
+          "file": { "label": "Joindre un document", "hint": "Glisser un fichier ou cliquer" },
+          "message": { "label": "Message", "placeholder": "Décrivez votre projet ou votre demande…" }
+        },
+        "submit": "Envoyer la demande"
+      }
+    }
+  }
+}
