@@ -113,7 +113,7 @@ watch(() => route.path, () => (menuOpen.value = false));
     text-transform: uppercase;
     font-family: var(--font-heading);
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
     color: white;
     &.active {
       color: #c1a258;

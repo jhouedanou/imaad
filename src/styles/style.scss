@@ -29,9 +29,21 @@ body {
   font-family: var(--font);
   color: var(--text-dark);
   background: var(--white);
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+p {
+  font-family: var(--font);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+li {
+  font-family: var(--font);
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -138,7 +150,7 @@ footer {
 
 .footer-brand p {
   font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--gold);
   margin-top: 10px;
   letter-spacing: -0.1px;
@@ -153,7 +165,7 @@ footer {
 }
 
 .footer-brand .logo-name {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 18px;
   font-weight: 600;
   color: var(--white);
@@ -177,7 +189,7 @@ footer {
 .footer-col ul li a {
   font-family: var(--font);
   color: #d4e0f5;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: -0.13px;
   transition: color 0.2s;
 }
@@ -186,7 +198,7 @@ footer {
 
 .footer-col .contact-email {
   font-family: var(--font);
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: -0.13px;
   color: #d4e0f5;
 }
@@ -213,7 +225,7 @@ footer {
 
 .bureaux-flags span {
   font-family: var(--font);
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: -0.13px;
   color: #d4e0f5;
   display: flex;
@@ -328,7 +340,7 @@ footer {
 /* ─── SECTION LABELS ─── */
 .section-label {
     font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -413,7 +425,7 @@ footer {
   border-radius: 2px;
   color: var(--white);
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.13px;
   text-transform: uppercase;
@@ -436,7 +448,7 @@ footer {
 .badge-status {
   border-radius: 2px;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.13px;
   padding: 0 14px;
@@ -452,8 +464,8 @@ footer {
 .card-project-body { padding: 13px 21px 20px; }
 
 .card-project-body .sector {
-  font-family: var(--font);
-  font-size: 13px;
+font-family: var(--font-heading);
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: -0.13px;
   color: #000;
@@ -471,7 +483,7 @@ footer {
 
 .card-project-body p {
   font-family: var(--font);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 300;
   letter-spacing: -0.13px;
   color: #707070;
@@ -488,7 +500,7 @@ footer {
 }
 
 .hero-stat-value {
-  font-size: 23px;
+  font-size: 25px;
   font-weight: 900;
   color: var(--gold);
   font-family: var(--font-heading);
@@ -502,7 +514,7 @@ footer {
 }
 
 .hero-stat-label {
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 500;
   color: rgba(255,255,255,0.9);
   margin-top: 4px;
@@ -601,25 +613,26 @@ footer {
 .team-card-body .name {
   font-family: var(--font-heading);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 2px;
 }
 
 .team-card-body .title-fr {
   font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 600;
   color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 2px;
+  
 }
 
 .team-card-body .title-en {
   font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -627,14 +640,14 @@ footer {
 }
 
 .team-card-body p {
-  font-size: 12.5px;
+  font-size: 15px;
   color: var(--text-muted);
   line-height: 1.55;
   margin-bottom: 14px;
 }
 
 .team-card-body .linkedin-link {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--gold);
   letter-spacing: 0.5px;
@@ -644,7 +657,8 @@ footer {
 }
 
 .team-card-body .linkedin-email {
-  font-size: 10px;
+  font-size: 12px;
+  margin-top:1em;
   color: #c1a258;
   text-transform:uppercase !important;
 }
@@ -772,12 +786,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: var(--white);
   margin-bottom: 14px;
-  font-family: var(--font);
-  letter-spacing: -0.18px;
+font-family: var(--font-heading);  letter-spacing: -0.18px;
 }
 
 .domain-card .domain-desc {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.6;
   color: #f4f4f4;
   margin-bottom: 20px;
@@ -797,7 +810,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
   color: var(--gold);
   padding: 6px 0;
-  font-family: var(--font-heading);
+  font-family: var(--font);
   position: relative;
   padding-left: 14px;
 }
@@ -829,7 +842,7 @@ h1, h2, h3, h4, h5, h6 {
 .value-icon svg { color: var(--gold); }
 
 .value-card h3 {
-    font-family: OpenSans;
+font-family: var(--font-heading);
   font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
@@ -842,15 +855,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .value-card p {
- font-family: OpenSans;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #686868;
+     font-family: OpenSans;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.12px;
+    text-align: left;
+    color: #686868;
+    line-height: 1.8;
 }
 
 /* ─── UTILITY CLASSES ─── */
@@ -862,7 +876,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-submit {
-  font-size: 13px;
+  font-size: 15px;
     margin-top: 0;
   color:#0e1b2e !important;
 }
@@ -882,7 +896,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stat-row-text {
-  font-size: 13px;
+  font-size: 15px;
   color: rgba(255,255,255,0.65);
 }
 
@@ -892,7 +906,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .file-upload-text {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-muted);
 }
 
@@ -911,7 +925,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width:521px !important;
     margin:0 auto !important;
       font-family: OpenSans;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -998,7 +1012,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .team-card-body .linkedin-link {
   font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
   color: #23324f;
@@ -1009,7 +1023,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .phone-number {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-muted);
   margin-top: 4px;
 }
@@ -1114,7 +1128,7 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
   border-radius: 17px;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: -0.13px;
   text-transform: uppercase;
@@ -1164,7 +1178,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(255,255,255,0.8);
   color: var(--white);
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.13px;
   padding: 6px 12px;
@@ -1179,7 +1193,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(51,255,161,0.18);
   color: var(--gold);
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.13px;
   padding: 6px 14px;
@@ -1196,7 +1210,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-project--zeplin .sector {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   color: #000;
   margin-bottom: 6px;
@@ -1214,7 +1228,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-project--zeplin .card-project-body p {
   font-weight: 300;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-muted);
   line-height: 1.4;
 }
@@ -1285,7 +1299,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-zeplin-left .lead {
   font-family: var(--font);
-  font-size: 13px;
+  font-size: 15px;
   color: #707070;
   line-height: 1.54;
   letter-spacing: -0.13px;
@@ -1342,7 +1356,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-form-zeplin h3 {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   color: #000;
   text-align: left;
@@ -1491,7 +1505,7 @@ background-attachment: fixed;
 .page-contact{
   .section-label{
     text-align:left !important;
-    padding-bottom:12px !important;
+    padding-bottom:14px !important;
     color:rgb(193, 162, 88) !important;
   }
 }
