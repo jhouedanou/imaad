@@ -47,17 +47,6 @@
        url('https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4n.ttf') format('truetype');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Cinzel', serif;
-}
-
 // ── HERO SECTION ──
 .hero {
   padding: 70px 60px 60px;
@@ -503,14 +492,14 @@ margin-left:auto;
   .btn-gold {
   border-radius: 6px !important;
   background-color: #c1a258 !important;
-  font-family: Montserrat !important;
+  font-family: var(--font-heading) !important;
   font-size: 12px !important;
     color: #0e1b2e !important;
 
   }
    .btn-outline-white{
   border-radius: 6px !important;
-  font-family: Montserrat !important;
+  font-family: var(--font-heading) !important;
   font-size: 12px !important;
 
 
