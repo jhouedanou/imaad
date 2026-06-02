@@ -111,9 +111,9 @@ watch(() => route.path, () => (menuOpen.value = false));
   margin-left: 60px;
   a {
     text-transform: uppercase;
-    font-family: Montserrat;
+    font-family: var(--font-heading);
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     color: white;
     &.active {
       color: #c1a258;
@@ -220,9 +220,9 @@ watch(() => route.path, () => (menuOpen.value = false));
     gap: 4px;
 
     a {
-      font-family: Montserrat;
+      font-family: var(--font-heading);
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 400;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.9);
       padding: 14px 0;
