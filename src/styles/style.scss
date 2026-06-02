@@ -594,8 +594,11 @@ font-family: var(--font-heading);
 .team-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
 
 .team-card-img {
-  overflow: hidden;
-  background: white;
+      overflow: hidden;
+    background: white;
+    min-height: 201px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .team-card-img img {
@@ -608,6 +611,11 @@ font-family: var(--font-heading);
 .team-card-body {
   padding: 16px;
   border-top: 3px solid var(--gold);
+  
+  padding-bottom:1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .team-card-body .name {
@@ -615,12 +623,15 @@ font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 2px;
+  margin-bottom: 10px;
+  *{
+   text-transform:uppercase ; 
+  }
 }
 
 .team-card-body .title-fr {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--gold);
   text-transform: uppercase;
@@ -631,7 +642,7 @@ font-family: var(--font-heading);
 
 .team-card-body .title-en {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -647,7 +658,7 @@ font-family: var(--font-heading);
 }
 
 .team-card-body .linkedin-link {
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--gold);
   letter-spacing: 0.5px;
@@ -657,7 +668,7 @@ font-family: var(--font-heading);
 }
 
 .team-card-body .linkedin-email {
-  font-size: 12px;
+  font-size: 10px;
   margin-top:1em;
   color: #c1a258;
   text-transform:uppercase !important;
@@ -805,7 +816,7 @@ font-family: var(--font-heading);  letter-spacing: -0.18px;
 }
 
 .domain-card ul li {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.5px;
   color: var(--gold);
@@ -1001,8 +1012,8 @@ font-family: var(--font-heading);
 }
 
 .linkedin-email {
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 8px;
+  font-weight: 600;
   letter-spacing: 0.5px;
   color: var(--gold);
   font-family: var(--font-heading);
@@ -1012,7 +1023,7 @@ font-family: var(--font-heading);
 
 .team-card-body .linkedin-link {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.5px;
   color: #23324f;
