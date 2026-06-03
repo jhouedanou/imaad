@@ -492,15 +492,16 @@ font-family: var(--font-heading);
 
 /* ─── HERO STATS ROW ─── */
 .hero-stats-row {
-  display: flex;
-  gap: 48px;
-  margin-top: 48px;
-  padding-top: 32px;
-      position: relative;
+    display: flex;
+    gap: 48px;
+    margin-top: 48px;
+    padding-top: 32px;
+    position: relative;
+    max-width: 1024px;
 
   &::before{
-    content: "";
-    width: 595px;
+       content: "";
+    width: 79%;
     height: 1px;
     margin: 38.5px 240.5px 29px 43.5px;
     opacity: .27;
