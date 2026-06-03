@@ -113,6 +113,7 @@
 .hero-stats-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(184, 150, 46, 0.3);
+  border-radius: 6px;
   padding: 28px 24px;
   .form-control{
     background: transparent;
@@ -471,6 +472,7 @@ margin-left:auto;
   background: #f8f6f2;
   padding: 36px 32px;
   border: 1px solid var(--border);
+  border-radius: 6px;
 
   h3 {
     font-size: 15px;

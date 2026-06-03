@@ -118,7 +118,7 @@ ul { list-style: none; }
   font-weight: 600 !important;
   letter-spacing: 1px !important;
   text-transform: uppercase !important;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: background 0.2s !important;
 }
 
@@ -307,6 +307,7 @@ footer {
   cursor: pointer;
   transition: all 0.2s;
   border: none;
+  border-radius: 6px;
 }
 
 .btn-gold {
@@ -391,7 +392,7 @@ footer {
 .card-project {
   background: var(--white);
   border: 1px solid #bfbfbf;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
   transition: box-shadow 0.2s;
 }
@@ -777,7 +778,7 @@ h1, h2, h3, h4, h5, h6 {
 .domain-card {
   background: transparent;
   border: 1px solid rgba(112,112,112,0.7);
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 28px 22px;
   transition: border-color 0.2s;
   min-height: 358px;
@@ -1168,7 +1169,7 @@ font-family: var(--font-heading);
 /* ─── PROJET CARD ZEPLIN ─── */
 .card-project--zeplin {
   border: 1px solid #bfbfbf;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
   background: var(--white);
 }
