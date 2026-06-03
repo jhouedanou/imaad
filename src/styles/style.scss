@@ -496,7 +496,14 @@ font-family: var(--font-heading);
   gap: 48px;
   margin-top: 48px;
   padding-top: 32px;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  &::before{
+    content:"";
+      width: 595px;
+  height: 1px;
+  margin: 38.5px 240.5px 29px 43.5px;
+  opacity: 0.27;
+  background-color: #c1a258;
+  }
 }
 
 .hero-stat-value {
