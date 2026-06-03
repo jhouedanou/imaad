@@ -93,7 +93,7 @@ watch(() => route.path, () => (menuOpen.value = false));
 
 <style lang="scss" scoped>
 #ctnBtn {
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 14px 21px;
 }
 #logo {
