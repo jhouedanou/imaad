@@ -3,6 +3,9 @@
 // Bootstrap grid only (container / row / col + responsive flex/display utils)
 @import 'bootstrap/scss/bootstrap-grid';
 
+// Shared design tokens
+@import 'variables';
+
 :root {
   --navy: #0e1b2e;
   --navy-mid: #111f38;
@@ -118,7 +121,7 @@ ul { list-style: none; }
   font-weight: 600 !important;
   letter-spacing: 1px !important;
   text-transform: uppercase !important;
-  border-radius: 6px;
+  border-radius: $border-radius-base;
   transition: background 0.2s !important;
 }
 
@@ -307,7 +310,7 @@ footer {
   cursor: pointer;
   transition: all 0.2s;
   border: none;
-  border-radius: 6px;
+  border-radius: $border-radius-base;
 }
 
 .btn-gold {
@@ -392,7 +395,7 @@ footer {
 .card-project {
   background: var(--white);
   border: 1px solid #bfbfbf;
-  border-radius: 6px;
+  border-radius: $border-radius-base;
   overflow: hidden;
   transition: box-shadow 0.2s;
 }
@@ -778,7 +781,7 @@ h1, h2, h3, h4, h5, h6 {
 .domain-card {
   background: transparent;
   border: 1px solid rgba(112,112,112,0.7);
-  border-radius: 6px;
+  border-radius: $border-radius-base;
   padding: 28px 22px;
   transition: border-color 0.2s;
   min-height: 358px;
@@ -1169,7 +1172,7 @@ font-family: var(--font-heading);
 /* ─── PROJET CARD ZEPLIN ─── */
 .card-project--zeplin {
   border: 1px solid #bfbfbf;
-  border-radius: 6px;
+  border-radius: $border-radius-base;
   overflow: hidden;
   background: var(--white);
 }
@@ -1342,7 +1345,7 @@ font-family: var(--font-heading);
   height: 48px;
   background: #f7f5f0;
   border: 1px solid #decfab;
-  border-radius: 6px;
+  border-radius: $border-radius-base;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -3,6 +3,9 @@
 // Compilé vers index.css :  npx sass index.scss index.css --no-source-map
 // ===========================================================================
 
+// Shared design tokens
+@import 'variables';
+
 // ── POLICE OPENSANS ──
 // Alias "OpenSans" (sans espace) -> Open Sans.
 // local() : utilise la police installée / déjà chargée. Sinon fallback gstatic.
@@ -113,7 +116,7 @@
 .hero-stats-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(184, 150, 46, 0.3);
-  border-radius: 6px;
+  border-radius: $border-radius-base;
   padding: 28px 24px;
   .form-control{
     background: transparent;
@@ -440,7 +443,7 @@ margin-left:auto;
     height: 48px;
     background: #f7f5f0;
     border: 1px solid #decfab;
-    border-radius: 6px;
+    border-radius: $border-radius-base;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -472,7 +475,7 @@ margin-left:auto;
   background: #f8f6f2;
   padding: 36px 32px;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: $border-radius-base;
 
   h3 {
     font-size: 15px;
@@ -492,7 +495,6 @@ margin-left:auto;
 }
 .hero-left {
   .btn-gold {
-  border-radius: 6px !important;
   background-color: #c1a258 !important;
   font-family: var(--font-heading) !important;
   font-size: 12px !important;
@@ -500,7 +502,6 @@ margin-left:auto;
 
   }
    .btn-outline-white{
-  border-radius: 6px !important;
   font-family: var(--font-heading) !important;
   font-size: 12px !important;
 
