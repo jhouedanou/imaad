@@ -7,47 +7,42 @@ const props = defineProps({
   mailto: { type: String, default: 'infos@imaadholding.com' }
 })
 
-const WEB3FORMS_KEY = '6992f20d-ab58-4755-9e1a-4b7f842d5b98'
-
 const fields = reactive({ name: '', email: '', org: '', objet: '', message: '' })
-const mini = reactive({ name: '', email: '' })
+const mini = reactive({ name: '', email: '', nature: '' })
 const sending = ref(false)
 const status = ref(null) // 'success' | 'error' | null
 
-// Reprend la logique du template Web3Forms : FormData(form) + access_key
-async function handleSubmit(e) {
-  const form = e.target
-  const formData = new FormData(form)
+// Construit un lien mailto à partir des champs et ouvre le client mail de l'utilisateur.
+// Remarque : mailto ne permet pas de joindre le fichier (limitation du protocole).
+function handleSubmit() {
+  const isMini = props.variant === 'mini'
+  const lines = []
+  let name
 
-  // retire les inputs fichier vides (sinon Web3Forms répond 400)
-  for (const [key, value] of [...formData.entries()]) {
-    if (value instanceof File && value.size === 0) formData.delete(key)
-  }
-  formData.append('access_key', WEB3FORMS_KEY)
-
-  sending.value = true
-  status.value = null
-
-  try {
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData
-    })
-    const data = await response.json()
-
-    if (response.ok && data.success) {
-      status.value = 'success'
-      form.reset()
-      Object.keys(fields).forEach((k) => (fields[k] = ''))
-      Object.keys(mini).forEach((k) => (mini[k] = ''))
-    } else {
-      status.value = 'error'
+  if (isMini) {
+    name = mini.name
+    lines.push(`Nom / Organisation : ${mini.name}`)
+    lines.push(`Email : ${mini.email}`)
+    if (mini.nature) lines.push(`Nature de la demande : ${mini.nature}`)
+  } else {
+    name = fields.name
+    lines.push(`Nom complet : ${fields.name}`)
+    lines.push(`Email : ${fields.email}`)
+    if (fields.org) lines.push(`Organisation : ${fields.org}`)
+    if (fields.objet && fields.objet !== 'Sélectionner') {
+      lines.push(`Objet de la demande : ${fields.objet}`)
     }
-  } catch {
-    status.value = 'error'
-  } finally {
-    sending.value = false
+    lines.push('')
+    lines.push('Message :')
+    lines.push(fields.message || '')
   }
+
+  const subject = isMini ? '[IMAAD] Contact rapide' : `[IMAAD] Demande — ${name}`
+  const body = lines.join('\n')
+  const href = `mailto:${props.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
+  window.location.href = href
+  status.value = 'success'
 }
 </script>
 
@@ -88,21 +83,13 @@ async function handleSubmit(e) {
       </div>
     </div>
     <div class="form-group">
-      <label class="form-label" for="contact-file">{{ form.fields.file.label }}</label>
-      <div class="file-upload" @click="$refs.fileInput.click()">
-        <span class="file-upload-icon">📎</span>
-        <span class="file-upload-text">{{ form.fields.file.hint }}</span>
-        <input ref="fileInput" type="file" id="contact-file" name="attachment" hidden>
-      </div>
-    </div>
-    <div class="form-group">
       <label class="form-label" for="contact-msg">{{ form.fields.message.label }}</label>
       <textarea v-model="fields.message" id="contact-msg" name="message" class="form-control" rows="4" :placeholder="form.fields.message.placeholder"></textarea>
     </div>
     <button type="submit" class="btn btn-gold" :disabled="sending">
       {{ sending ? 'Envoi…' : form.submit }}
     </button>
-    <p v-if="status === 'success'" class="form-status form-status--ok">Message envoyé. Merci !</p>
+    <p v-if="status === 'success'" class="form-status form-status--ok">Votre logiciel de messagerie va s'ouvrir avec votre demande pré-remplie.</p>
     <p v-if="status === 'error'" class="form-status form-status--err">Erreur. Réessayez ou écrivez à {{ mailto }}.</p>
   </form>
 
@@ -155,7 +142,7 @@ async function handleSubmit(e) {
     <button type="submit" class="btn btn-gold btn-full btn-submit" :disabled="sending">
       {{ sending ? 'Envoi…' : form.submit }}
     </button>
-    <p v-if="status === 'success'" class="form-status form-status--ok">Message envoyé. Merci !</p>
+    <p v-if="status === 'success'" class="form-status form-status--ok">Votre logiciel de messagerie va s'ouvrir avec votre demande pré-remplie.</p>
     <p v-if="status === 'error'" class="form-status form-status--err">Erreur. Réessayez ou écrivez à {{ mailto }}.</p>
   </form>
 
@@ -187,10 +174,19 @@ async function handleSubmit(e) {
         required
       >
     </div>
+    <div class="form-group" style="margin-top: 10px;">
+      <input
+        v-model="mini.nature"
+        type="text"
+        name="Nature de la demande"
+        class="form-control"
+        placeholder="Nature de la demande"
+      >
+    </div>
     <button type="submit" class="btn btn-gold btn-full" :disabled="sending" style="margin-top: 20px; width: 100%; justify-content: center;">
       {{ sending ? 'Envoi…' : (form.submit || 'Contacter nos experts') }}
     </button>
-    <p v-if="status === 'success'" class="form-status form-status--ok">Message envoyé. Merci !</p>
+    <p v-if="status === 'success'" class="form-status form-status--ok">Votre logiciel de messagerie va s'ouvrir avec votre demande pré-remplie.</p>
     <p v-if="status === 'error'" class="form-status form-status--err">Erreur. Réessayez.</p>
   </form>
 </template>

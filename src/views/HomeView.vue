@@ -88,8 +88,8 @@ useSeo(p.meta);
     </div>
   </section>
 
-  <!-- TEAM PREVIEW -->
-  <section class="section-team-preview">
+  <!-- TEAM PREVIEW — masquée temporairement (remettre v-if="true" pour réafficher) -->
+  <section v-if="false" class="section-team-preview">
     <div class="section-header">
       <div class="section-label">{{ p.teamPreview.label }}</div>
       <h2>{{ p.teamPreview.title }}</h2>
